@@ -1,0 +1,43 @@
+# Closed vocabulary of typed relations (docs/DATA-MODEL.md section 4.2, ADR-0005).
+# Directed: entries read source -> target. Every edge also carries a one-sentence reason
+# (except "related"); the build renders the inverse view automatically.
+- id: is-part-of
+  label: is part of
+  inverse_label: has part
+  skos: skos:broader
+  description: target contains/or is the broader frame of source
+- id: enables
+  label: enables
+  inverse_label: is enabled by
+  skos: osg:enables  # rdfs:subPropertyOf skos:related, namespace https://w3id.org/os-glossary/vocab/
+  description: source makes target possible or much easier
+- id: constrains
+  label: constrains
+  inverse_label: is constrained by
+  skos: osg:constrains
+  description: source limits, delays or burdens target
+- id: responds-to
+  label: responds to
+  inverse_label: is responded to by
+  skos: osg:respondsTo
+  description: source is a reform/remedy directed at target's problem
+- id: contributes-to
+  label: contributes to
+  inverse_label: is contributed to by
+  skos: osg:contributesTo
+  description: source is a documented driver of target
+- id: contrasts-with
+  label: contrasts with
+  inverse_label: contrasts with
+  skos: osg:contrastsWith
+  description: commonly confused or meaningfully opposite pair; renders symmetrically, stored once
+- id: is-measured-by
+  label: is measured by
+  inverse_label: measures
+  skos: osg:isMeasuredBy
+  description: source is quantified/captured by target
+- id: related
+  label: related
+  inverse_label: related
+  skos: skos:related
+  description: untyped cross-reference (pre-curation default for migrated "see also")

@@ -1,0 +1,69 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check JSON schemas parse
+        run: |
+          python3 - << 'PY'
+          import json, sys
+          from pathlib import Path
+          for p in sorted(Path("schemas").glob("*.json")):
+              json.loads(p.read_text(encoding="utf-8"))
+              print("ok", p)
+          PY
+      - name: Check vocabularies are well formed
+        run: |
+          python3 - << 'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, "scripts")
+          from validate import id_list
+          themes = id_list(Path("data/themes.yaml"))
+          rels = id_list(Path("data/relationship-types.yaml"))
+          assert themes and len(themes) >= 8, themes
+          assert rels and len(rels) >= 8, rels
+          print("ok vocabularies:", len(themes), "themes,", len(rels), "relation types")
+          PY
+
+  validate-terms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lint term files
+        run: python3 scripts/validate.py content/terms
+
+  migration-acceptance:
+    runs-on: ubuntu-latest
+    # Word-for-word gate against the legacy DOCX (D-11); runs once legacy/ exists.
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check migration acceptance
+        run: |
+          if [ ! -f legacy/OpenScience_Glossary.docx ]; then
+            echo "legacy DOCX not committed yet; skipping (D-1)"
+            exit 0
+          fi
+          if ! ls content/terms/*.md >/dev/null 2>&1; then
+            echo "no term files yet; skipping"
+            exit 0
+          fi
+          python3 scripts/check_migration.py legacy/OpenScience_Glossary.docx content/terms

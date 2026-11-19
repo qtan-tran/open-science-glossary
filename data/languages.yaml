@@ -1,0 +1,8 @@
+# UI + content languages (docs/DATA-MODEL.md section 6). New languages: add an entry, no code changes.
+- id: en
+  label: English
+  notice: ""
+- id: de
+  label: Deutsch
+  notice: "Dieser Eintrag ist noch nicht übersetzt; die englische Fassung wird angezeigt."
+  reviewed_rule: "A German translation renders as reviewed only after native-speaker sign-off (D-9)."

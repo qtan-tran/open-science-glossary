@@ -1,0 +1,35 @@
+# Controlled vocabulary: themes (the teaching layers). Decided in docs/DECISIONS.md; see docs/DATA-MODEL.md section 4.1.
+# id is stable and used in term front matter; labels may change.
+- id: publishing
+  label: Publishing models & economics
+  description: How research outputs get published, who pays, and with what consequences
+- id: policy
+  label: Policy, mandates & rights
+  description: Funder requirements, declarations, laws, and author rights
+- id: assessment
+  label: Research assessment & metrics
+  description: How quality and impact are measured, and how they are misused
+- id: integrity
+  label: Research integrity & reproducibility
+  description: Practices, failures, and reforms that make findings trustworthy
+- id: infrastructure
+  label: Infrastructure, platforms & identifiers
+  description: Repositories, registries, software and services underlying research
+- id: data
+  label: Research data & governance
+  description: FAIR/CARE, data management planning, data stewardship
+- id: peer-review
+  label: Peer review
+  description: The refereeing system and its open reform variants
+- id: participation
+  label: Participation & public engagement
+  description: Citizen science, crowdsourcing, co-production with communities
+- id: heritage
+  label: Cultural heritage & GLAM
+  description: Galleries, libraries, archives, museums, digitisation, reuse
+- id: equity
+  label: Global equity & epistemic justice
+  description: Who is structurally included or excluded as a knower
+- id: licensing
+  label: Licensing & copyright
+  description: Open licences, waivers, rights retention

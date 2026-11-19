@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: >-
+  If you cite the glossary, cite the release you used via its version DOI
+  (all versions resolve from the concept DOI below).
+title: Open Science Glossary
+type: document
+author:
+  - family-names: Tran
+    given-names: Quoc-Tan
+    orcid: "https://orcid.org/0000-0003-3533-5858"
+keywords:
+  - open science
+  - glossary
+  - scholarly communication
+  - open access
+  - research data
+license: CC-BY-4.0
+url: https://github.com/qtan-tran/open-science-glossary
+repository-code: https://github.com/qtan-tran/open-science-glossary
+# Version DOI is minted at each Zenodo release; this placeholder is filled in
+# as part of the release workflow (docs/ROADMAP.md, D-3). All versions of the
+# Word and site editions share the concept DOI below.
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23449750
+    description: Zenodo concept DOI (all versions, v1.0.0 onward)
