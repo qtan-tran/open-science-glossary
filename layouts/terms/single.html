@@ -16,19 +16,33 @@
   {{ .Content }}
 
   {{ $related := $p.related }}
-  {{ $see := slice }}{{ $typed := slice }}
-  {{ range $related }}{{ if eq .type "related" }}{{ $see = $see | append . }}{{ else }}{{ $typed = $typed | append . }}{{ end }}{{ end }}
-  {{ with $typed }}
+  {{ $see := slice }}{{ $rows := slice }}
+  {{ range $related }}
+    {{ if eq .type "related" }}
+      {{ $see = $see | append . }}
+    {{ else }}
+      {{ $target := index (where site.RegularPages "Params.id" .target) 0 }}
+      {{ $rows = $rows | append (dict "dir" "from" "rel" .type "partner" $target.Title "url" $target.RelPermalink "reason" .reason) }}
+    {{ end }}
+  {{ end }}
+  {{ range $partner := where site.RegularPages "Section" "terms" }}
+    {{ range $e := $partner.Params.related }}
+      {{ if and (ne $e.type "related") (eq $e.target $p.id) }}
+        {{ $rows = $rows | append (dict "dir" "to" "rel" $e.type "partner" $partner.Title "url" $partner.RelPermalink "reason" (printf "%s: %s" $partner.Title $e.reason)) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $rows }}
     <section class="relations">
       <h2>Relationships</h2>
       <table>
-        <thead><tr><th>Relation</th><th>Partner</th><th>Why</th></tr></thead>
+        <thead><tr><th scope="col">Direction</th><th scope="col">Relation</th><th scope="col">Partner</th><th scope="col">Why</th></tr></thead>
         <tbody>
           {{ range . }}
-          {{ $target := index (where site.RegularPages "Params.id" .target) 0 }}
           <tr>
-            <td>{{ .type }}</td>
-            <td><a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a></td>
+            <td>{{ if eq .dir "from" }}from this term{{ else }}to this term{{ end }}</td>
+            <td>{{ .rel }}</td>
+            <td><a href="{{ .url }}">{{ .partner }}</a></td>
             <td>{{ .reason }}</td>
           </tr>
           {{ end }}

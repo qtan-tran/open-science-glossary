@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "contributes-to"
   target: "h-index"
+  reason: "Splitting one study into minimal publishable units inflates metrics such as the h-index."
 - type: "related"
   target: "replication-crisis"
 ---

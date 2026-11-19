@@ -29,6 +29,10 @@ related:
   target: "sherpa-romeo"
 - type: "related"
   target: "zenodo"
+- type: "is-part-of"
+  target: "open-access"
+  reason: "Green is the OA route where a copy is deposited in a repository."
+
 ---
 
 A model in which an author self-archives a version of their article (usually the Accepted Manuscript) in a repository; institutional, subject-specific, or general; without paying an APC. H

@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "accepted-manuscript"
-- type: "related"
+- type: "constrains"
   target: "green-oa"
+  reason: "Publisher-imposed delay before a deposit is permitted (CONCEPT worked example 2)."
 - type: "related"
   target: "plan-s"
 - type: "related"

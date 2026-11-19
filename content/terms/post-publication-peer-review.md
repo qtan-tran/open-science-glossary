@@ -19,6 +19,11 @@ contributors:
 - name: "Quoc-Tan Tran"
   orcid: "0000-0003-3533-5858"
   role: "author"
+related:
+- type: "responds-to"
+  target: "replication-crisis"
+  reason: "Post-publication correction is one field answer to the replication crisis (CONCEPT worked example 3)."
+
 ---
 
 Refereeing that takes place after publication: public, often informal scrutiny of published papers and their evidence, performed largely by science sleuths and on platforms such as PubPeer.

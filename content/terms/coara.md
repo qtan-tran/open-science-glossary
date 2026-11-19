@@ -23,8 +23,9 @@ related:
   target: "dora"
 - type: "related"
   target: "h-index"
-- type: "related"
+- type: "responds-to"
   target: "impact-factor"
+  reason: "CoARA implements the assessment reform responding to journal-metric misuse."
 ---
 
 A European initiative (launched 2022) of 700+ institutions and funders committed to reforming how research and researchers are evaluated. CoARA signatories commit to: CoARA is the second step in a reform arc: DORA (2012) said “stop using IF”; CoARA (2022) said “use better indicators instead”

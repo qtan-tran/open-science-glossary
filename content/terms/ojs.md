@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "enables"
   target: "diamond-oa"
+  reason: "Open-source journal platforms such as OJS make no-fee OA publishing affordable."
 - type: "related"
   target: "omp"
 - type: "related"

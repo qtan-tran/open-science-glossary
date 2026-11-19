@@ -20,12 +20,17 @@ related:
   target: "apc"
 - type: "related"
   target: "diamond-oa"
-- type: "related"
+- type: "contrasts-with"
   target: "green-oa"
+  reason: "The classic route contrast: open on the journal site (gold) vs deposited in a repository (green)."
 - type: "related"
   target: "hybrid-oa"
 - type: "related"
   target: "plan-s"
+- type: "is-part-of"
+  target: "open-access"
+  reason: "Gold is the OA route where the final version is published open on the journal's own site."
+
 ---
 
 A publishing model in which an article is made immediately and freely available on the publisher’s own website upon publication, typically funded by an APC paid by the author or their institution.

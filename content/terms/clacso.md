@@ -18,8 +18,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "is-part-of"
   target: "bibliodiversity"
+  reason: "Bibliodiversity is used to justify supporting SciELO, Redalyc and CLACSO (CONCEPT worked example 1)."
 - type: "related"
   target: "diamond-oa"
 - type: "related"

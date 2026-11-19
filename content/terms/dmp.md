@@ -21,8 +21,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "enables"
   target: "fair-principles"
+  reason: "Data management plans operationalise FAIR data stewardship."
 ---
 
 A formal document describing how research data will be collected, stored, managed, shared, and preserved during and after a research project. DMPs are now required by most major funders (EU Horizon Europe, UKRI, NSF, DFG).

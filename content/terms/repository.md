@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "doi"
-- type: "related"
+- type: "enables"
   target: "green-oa"
+  reason: "Green OA in practice means depositing the accepted manuscript in a repository."
 - type: "related"
   target: "zenodo"
 ---

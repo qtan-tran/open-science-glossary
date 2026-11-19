@@ -23,8 +23,9 @@ contributors:
 related:
 - type: "related"
   target: "apc"
-- type: "related"
+- type: "enables"
   target: "apc-tourism"
+  reason: "Transformative agreements concentrate OA benefits in well-resourced institutions, reinforcing inequities (CONCEPT worked example 1)."
 - type: "related"
   target: "elsevier"
 - type: "related"

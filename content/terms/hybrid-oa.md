@@ -25,6 +25,10 @@ related:
   target: "plan-s"
 - type: "related"
   target: "transformative-agreement"
+- type: "is-part-of"
+  target: "open-access"
+  reason: "Hybrid mixes subscription articles with individually paid OA articles in one journal."
+
 ---
 
 A model in which a subscription journal offers authors the option to pay an APC to make their individual article immediately open access, while the journal overall remains paywalled for non-OA articles. I

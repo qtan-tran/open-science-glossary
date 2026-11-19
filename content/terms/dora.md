@@ -23,8 +23,9 @@ related:
   target: "coara"
 - type: "related"
   target: "h-index"
-- type: "related"
+- type: "responds-to"
   target: "impact-factor"
+  reason: "DORA was written in response to the Journal Impact Factor's dominance in research assessment."
 ---
 
 An international declaration (2012) calling for the reform of how research outputs and researchers are evaluated. Its central commitment: “Do not use journal-based metrics such as Journal Impact Factors as a surrogate measure of the quality of individual research articles, the contributions of individual scientists, or in hiring, promotion, or funding decisions.” E

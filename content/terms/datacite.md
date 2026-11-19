@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "crossref"
-- type: "related"
+- type: "enables"
   target: "doi"
+  reason: "DataCite issues DOIs for datasets and other research objects."
 - type: "related"
   target: "pid"
 - type: "related"

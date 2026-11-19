@@ -30,6 +30,13 @@ related:
   target: "redalyc"
 - type: "related"
   target: "scielo"
+- type: "responds-to"
+  target: "epistemic-injustice"
+  reason: "Described as the most equitable OA model for researchers globally (CONCEPT worked example 1)."
+- type: "is-part-of"
+  target: "open-access"
+  reason: "Diamond is the OA route with neither reader payments nor author-side fees."
+
 ---
 
 A publishing model in which neither the author nor the reader pays any fee. Diamond OA journals are funded by academic institutions, scholarly societies, national agencies, or consortia.

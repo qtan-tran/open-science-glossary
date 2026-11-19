@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "apc"
-- type: "related"
+- type: "enables"
   target: "paper-mill"
+  reason: "Predatory outlets provide a ready market for paper-mill products."
 ---
 
 A journal or publisher that charges publication fees (APCs) while providing little or no legitimate peer review, editorial services, or quality control; deceiving authors about the nature of the service.

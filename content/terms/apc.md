@@ -31,6 +31,10 @@ related:
   target: "hybrid-oa"
 - type: "related"
   target: "plan-s"
+- type: "enables"
+  target: "apc-tourism"
+  reason: "Institutions' transformative-agreement coverage lets well-funded researchers publish OA while others pay full APCs (CONCEPT worked example 1)."
+
 ---
 
 A fee paid by an author (or their institution / funder) to a journal so that an article is made immediately and permanently open access on the publisher’s website.

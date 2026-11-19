@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "contrasts-with"
   target: "accepted-manuscript"
+  reason: "The preprint precedes peer review; the accepted manuscript is its post-review successor."
 - type: "related"
   target: "registered-reports"
 - type: "related"

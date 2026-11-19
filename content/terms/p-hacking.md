@@ -22,8 +22,9 @@ related:
   target: "pre-registration"
 - type: "related"
   target: "registered-reports"
-- type: "related"
+- type: "contributes-to"
   target: "replication-crisis"
+  reason: "Analysing until something is significant inflates false positives (CONCEPT worked example 3)."
 ---
 
 The practice of running multiple statistical tests or exploring multiple variables until a statistically significant result (p < 0.05) is found, and then reporting only that result as if it had been the planned analysis. Also called “data dredging” or “fishing”.
