@@ -1,10 +1,12 @@
 name: legacy-import
 
 # One-shot importer (D-1): decodes the checksummed v1.0.0 DOCX and PDF payloads
-# committed under .legacy-import/, writes them to legacy/, then deletes both
-# the payloads and this workflow file in a single commit. The MCP/text tooling
-# available to the maintainer cannot push arbitrary binary bytes directly;
-# this workflow exists only to perform that byte-exact transfer.
+# committed under .legacy-import/ and writes byte-exact binaries to legacy/.
+# The text-only maintainer tooling cannot push arbitrary binary bytes, so this
+# workflow performs the transfer. GitHub rejects pushes by the Actions GITHUB_
+# TOKEN that modify workflow files, so this workflow deliberately commits ONLY
+# legacy/; removal of the payloads and of this workflow afterwards is done by
+# the maintainer with the regular text tooling.
 
 on:
   push:
@@ -31,17 +33,16 @@ jobs:
               b = base64.b64decode(pathlib.Path(src).read_text(encoding="utf-8"))
               got = hashlib.md5(b).hexdigest()
               assert got == expected, f"checksum mismatch for {src}: {got}"
+              pathlib.Path(dst).parent.mkdir(parents=True, exist_ok=True)
               pathlib.Path(dst).write_bytes(b)
               print(f"ok {dst}: {len(b)} bytes, md5 {got}")
           decode(".legacy-import/OpenScience_Glossary.docx.b64", "legacy/OpenScience_Glossary.docx", DOCX_MD5)
           decode(".legacy-import/OpenScience_Glossary.pdf.b64", "legacy/OpenScience_Glossary.pdf", PDF_MD5)
           PY
-      - name: Commit legacy/ and remove importer artifacts
+      - name: Commit legacy/ binaries only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add legacy/
-          git rm -rq .legacy-import || true
-          git rm -q .github/workflows/legacy-import.yml
-          git commit -m "legacy: record the v1.0.0 DOCX and PDF export (D-1, byte-exact import verified by checksum)"
+          git diff --staged --quiet || git commit -m "legacy: record the v1.0.0 DOCX and PDF export (D-1, byte-exact import verified by checksum)"
           git push
