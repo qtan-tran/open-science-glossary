@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $id := .Params.themeid }}
+<h1>{{ partial "theme-label.html" $id | default .Title }}</h1>
+<p>{{ .Description | default .Params.themeDesc }}</p>
+{{ $members := sort (where (where site.RegularPages "Section" "terms") "Params.themes" "intersect" (slice $id)) "Title" }}
+<p>{{ len $members }} terms in this theme:</p>
+<ul class="az">
+  {{ range $members }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+<p><a href="{{ "theme/" | relURL }}">All themes</a></p>
+{{ end }}

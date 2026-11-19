@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<article class="term">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with $p.alternatives }}<p class="alt">Also: {{ delimit . ", " }}</p>{{ end }}
+    {{ with $p.themes }}
+      <p class="themes">
+        {{ range . }}<a class="chip" href="{{ printf "theme/%s/" . | relURL }}">{{ partial "theme-label.html" . | default (printf "%s" .) }}</a> {{ end }}
+      </p>
+    {{ end }}
+    {{ if eq $p.status "draft" }}<p class="status draft">Draft stub (structure from the v1.0.0 split, text not final)</p>
+    {{ else if eq $p.status "reviewed" }}<p class="status reviewed">Reviewed entry</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  {{ $related := $p.related }}
+  {{ $see := slice }}{{ $typed := slice }}
+  {{ range $related }}{{ if eq .type "related" }}{{ $see = $see | append . }}{{ else }}{{ $typed = $typed | append . }}{{ end }}{{ end }}
+  {{ with $typed }}
+    <section class="relations">
+      <h2>Relationships</h2>
+      <table>
+        <thead><tr><th>Relation</th><th>Partner</th><th>Why</th></tr></thead>
+        <tbody>
+          {{ range . }}
+          {{ $target := index (where site.RegularPages "Params.id" .target) 0 }}
+          <tr>
+            <td>{{ .type }}</td>
+            <td><a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a></td>
+            <td>{{ .reason }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </section>
+  {{ end }}
+  {{ with $see }}
+    <section class="see-also">
+      <h2>See also</h2>
+      <ul>
+        {{ range . }}
+          {{ $target := index (where site.RegularPages "Params.id" .target) 0 }}
+          <li><a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  <section class="citation">
+    <h2>Cite this term</h2>
+    {{ $permanent := printf "%s/term/%s" site.Params.permanentBase .Params.id }}
+    <p>APA: Tran, Q.-T. (2026). <em>{{ .Title }}</em>. In <em>{{ site.Title }}</em> (Version {{ site.Params.version }}). Zenodo. {{ printf "https://doi.org/%s" site.Params.conceptDOI }}</p>
+    {{ $bibtex := printf "@misc{osg_%s,\n  author = {Tran, Quoc-Tan},\n  title = {{%s}},\n  year = {2026},\n  howpublished = {Open Science Glossary},\n  note = {Version %s. %s},\n  doi = {%s}\n}" .Params.id .Title site.Params.version $permanent site.Params.conceptDOI }}
+    <pre><code>{{ $bibtex }}</code></pre>
+    <p class="small">Dated {{ $p.date_last_changed }} · permanent URL: <code>{{ $permanent }}</code></p>
+  </section>
+</article>
+{{ end }}

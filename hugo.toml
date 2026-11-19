@@ -1,0 +1,28 @@
+# Open Science Glossary site config (Phase 1, ROADMAP 1.1-1.4).
+# Generator: Hugo v0.170.0, exact version pinned in CI and docs/rebuild.md (D-2).
+baseURL = "https://qtan-tran.github.io/open-science-glossary/"
+locale = "en"
+defaultContentLanguage = "en"
+title = "Open Science Glossary"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]  # no taxonomy pages: themes render from data/ + content/theme/
+
+[permalinks]
+  terms = "/term/:slugorfilename/"  # citable shape mirrors the w3id layer (ADR-0003)
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
+
+[params]
+  conceptDOI = "10.5281/zenodo.23449750"
+  conceptDOIURL = "https://doi.org/10.5281/zenodo.23449750"
+  version = "2.0.0"
+  preRelease = true  # true until the v2.0.0 tag and Zenodo upload (ROADMAP 1.6); footer marks it
+  permanentBase = "https://w3id.org/os-glossary"  # ADR-0003; registered via upstream PR (roadmap 1.5)
+  hostURL = "https://qtan-tran.github.io/open-science-glossary/"
+  licenseContent = "CC BY 4.0"
+  licenseCode = "MIT"
+  langNote = "English edition; a reviewed German pilot is planned (D-9)."

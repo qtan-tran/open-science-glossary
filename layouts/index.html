@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $terms := where site.RegularPages "Section" "terms" }}
+<h1>An open glossary of open science</h1>
+{{ .Content }}
+<p class="hint">{{ len $terms }} terms · {{ len hugo.Data.themes }} themes · every page works without JavaScript · all content CC BY 4.0.</p>
+<h2>Browse by theme</h2>
+{{ range hugo.Data.themes }}
+  {{ $id := .id }}
+  {{ $count := len (where $terms "Params.themes" "intersect" (slice $id)) }}
+  <p><a class="chip" href="{{ printf "theme/%s/" $id | relURL }}">{{ .label }}</a> <span class="small">({{ $count }})</span></p>
+{{ end }}
+<p><a href="{{ "terms/" | relURL }}">Browse all terms A-Z</a> · <a href="{{ "quick-reference/" | relURL }}">Quick reference</a></p>
+{{ end }}

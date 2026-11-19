@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Themes</h1>
+<p>The teaching layers from the data model; every term carries one or more.</p>
+{{ $terms := where site.RegularPages "Section" "terms" }}
+{{ range hugo.Data.themes }}
+  {{ $id := .id }}
+  {{ $count := len (where $terms "Params.themes" "intersect" (slice $id)) }}
+  <section class="theme-card">
+    <h2><a href="{{ printf "theme/%s/" $id | relURL }}">{{ .label }}</a></h2>
+    <p>{{ .description }} · {{ $count }} terms</p>
+  </section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>All terms (A-Z)</h1>
+<p class="hint">{{ len (where site.RegularPages "Section" "terms") }} terms. Your browser's in-page find (Ctrl/Cmd+F) searches this page without JavaScript (ADR-0006).</p>
+{{ $pages := sort (where site.RegularPages "Section" "terms") "Title" }}
+{{ $letter := "" }}
+<ul class="az">
+  {{ range $pages }}
+    {{ $l := slicestr .Title 0 1 | upper }}
+    {{ if ne $l $letter }}{{ $letter = $l }}</ul><h2 id="letter-{{ $l | urlize }}">{{ $l }}</h2><ul class="az">{{ end }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.alternatives }} <span class="alt">({{ delimit . ", " }})</span>{{ end }}</li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,8 @@
+{{- if .AlertType -}}
+<aside class="alert alert-{{ .AlertType | urlize }}" role="note">
+  <p class="alert-title">Common confusion</p>
+  {{ .Text }}
+</aside>
+{{- else -}}
+<blockquote>{{ .Text }}</blockquote>
+{{- end -}}

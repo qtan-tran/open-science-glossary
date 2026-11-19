@@ -1,0 +1,6 @@
+/public/
+/resources/
+.hugo_build.lock
+/static/downloads/*.bib
+__pycache__/
+*.pyc
