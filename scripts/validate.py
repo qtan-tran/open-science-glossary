@@ -170,13 +170,15 @@ def check_file(path, themes, reltypes):
         et, tp = str(e.get("type", "")), str(e.get("target", ""))
         if tp and SLUG.match(tp) and tp == fm.get("id"):
             err("related: self-reference (V4)")
-        if not et:
+        if not tp:
             err("related: empty target (V4)")
+        if not et:
+            err("related: missing type (V4)")
         if et and et not in reltypes:
             err(f"related: type '{et}' not in data/relationship-types.yaml (V4)")
         reason = str(e.get("reason", "")).strip()
         if not reason and et != "related":
-            err(f"related: '{et} -> {et}' requires a reason (V4)")
+            err(f"related: '{tp}' edge of type '{et}' requires a reason (V4)")
 
     # V6 deprecated needs a live replacement (existence checked after first pass)
     if fm.get("status") == "deprecated":
