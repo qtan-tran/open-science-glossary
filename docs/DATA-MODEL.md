@@ -1,6 +1,6 @@
 # DATA MODEL — Open Science Glossary website
 
-Status: draft for review · Companion: [CONCEPT.md](CONCEPT.md) · [ARCHITECTURE.md](ARCHITECTURE.md) · [ROADMAP.md](ROADMAP.md)
+Status: approved 2026-11-19 (maintainer review; decisions in [DECISIONS.md](DECISIONS.md)) · Companion: [CONCEPT.md](CONCEPT.md) · [ARCHITECTURE.md](ARCHITECTURE.md) · [ROADMAP.md](ROADMAP.md)
 
 ## 1. Principles
 
@@ -35,7 +35,7 @@ Status: draft for review · Companion: [CONCEPT.md](CONCEPT.md) · [ARCHITECTURE
 | date_created | date | yes | date the term entered the glossary (migrated terms: 2026-10-18, the v1.0.0 record date) |
 | date_last_changed | date | yes | last substantive change (not typo fixes) |
 | sources | array | yes (at least 1) | each: text + optional doi/url; DOI preferred where available |
-| contributors | array | yes | each: name, optional orcid, role (author/reviewer/translator/editor) |
+| contributors | array | yes | each: name, optional orcid, optional affiliation (per person only, never project-wide, ADR-0009), role (author/reviewer/translator/editor) |
 | related | array | no | typed edges, see section 5 |
 | matches | object | no | wikidata (Q-ID), forrt (slug/URL) for external alignment (ADR-0005) |
 
@@ -256,6 +256,7 @@ This is the draft to be finalized as schemas/term.schema.json in Phase 0. It val
       "properties": {
         "name": { "type": "string" },
         "orcid": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$" },
+        "affiliation": { "type": "string", "description": "Optional, per person; never a project-wide field (ADR-0009)" },
         "role": { "type": "string", "enum": ["author", "reviewer", "translator", "editor"] }
       }
     },
@@ -277,7 +278,7 @@ This is the draft to be finalized as schemas/term.schema.json in Phase 0. It val
 }
 ```
 
-Validation additionally enforces (in scripts/validate.py, beyond what JSON Schema can express): every related.target is an existing term id or listed in data/candidates.yaml; deprecated implies replaced_by pointing at a live term; contrasts-with/related pairs are not entered on both ends; body conventions (3.2) hold; themes used match data/themes.yaml.
+Validation additionally enforces (in scripts/validate.py, beyond what JSON Schema can express): every related.target is an existing term id or an altLabel of one (dangling references fail the build, D-5; not-yet-written targets are removed from see-also at migration and tracked in docs/BACKLOG-TERMS.md); deprecated implies replaced_by pointing at a live term; contrasts-with/related pairs are not entered on both ends; body conventions (3.2) hold; themes used match data/themes.yaml.
 
 ## 6. Languages
 
@@ -288,6 +289,7 @@ Validation additionally enforces (in scripts/validate.py, beyond what JSON Schem
 | Fallback | missing translation -> English content rendered under the DE URL with a visible notice |
 | Exports | SKOS prefLabel@de etc. per available translation; CSV gains a lang column per (term, language) row |
 | Citation | the translated term page cites the same release DOI; translations are part of the same version |
+| Review status | a translation renders as reviewed only after native-speaker sign-off (D-9); otherwise it shows draft status |
 
 ## 7. Current content: assignment of every existing term to themes
 
@@ -341,16 +343,16 @@ Draft assignment of the v1.0.0 document (to be confirmed during migration, ROADM
 | 44 | Predatory Journal | predatory-journal | integrity, publishing | |
 | 45 | Pre-print | preprint | publishing, infrastructure | |
 | 46 | Pre-registration | pre-registration | integrity | |
-| 47 | Read-and-Publish Agreement (Transformative Agreement) | transformative-agreement | publishing, policy, equity | combined heading, single concept (Q4) |
+| 47 | Read-and-Publish Agreement (Transformative Agreement) | transformative-agreement | publishing, policy, equity | single concept, both labels as alternatives (D-4); also the alias home for "Transformative Agreement" references (D-5) |
 | 48 | Redalyc | redalyc | equity, publishing, infrastructure | |
 | 49 | Registered Reports | registered-reports | integrity, peer-review | |
-| 50 | Replication / Reproducibility | reproducibility + replication | integrity (both) | combined heading; split recommended (Q4), contrasts-with edge |
+| 50 | Replication / Reproducibility | reproducibility + replication | integrity (both) | combined heading; split decided (D-4): two files, old combined labels kept as altLabels, contrasts-with edge |
 | 51 | Replication Crisis | replication-crisis | integrity, assessment | |
 | 52 | Replication Games | replication-games | integrity, participation | |
 | 53 | Repository | repository | infrastructure, data | |
 | 54 | ROR | ror | infrastructure | |
 | 55 | Salami Slicing | salami-slicing | integrity, assessment | |
-| 56 | Science Sleuths / Post-Publication Peer Review | science-sleuths + post-publication-peer-review | peer-review, integrity (both) | combined heading; split recommended (Q4) |
+| 56 | Science Sleuths / Post-Publication Peer Review | science-sleuths + post-publication-peer-review | peer-review, integrity (both) | combined heading; split decided (D-4): Science Sleuths (actors) + Post-Publication Peer Review (practice), is-part-of edge, combined labels kept as altLabels |
 | 57 | SciELO | scielo | equity, publishing, infrastructure | |
 | 58 | Secondary Publication Right | secondary-publication-right | policy, licensing | |
 | 59 | SHERPA/RoMEO | sherpa-romeo | infrastructure, publishing | |
@@ -359,15 +361,15 @@ Draft assignment of the v1.0.0 document (to be confirmed during migration, ROADM
 | 62 | Wikimedia Commons | wikimedia-commons | heritage, participation, infrastructure | |
 | 63 | Zenodo | zenodo | infrastructure, data | |
 | 64 | Zooniverse | zooniverse | participation, heritage | |
-| 65 | DOAJ (Quick-Reference only, no entry in v1.0.0) | doaj | publishing, infrastructure | new term candidate (Q5) |
+| 65 | DOAJ (Quick-Reference only, no entry in v1.0.0) | doaj | publishing, infrastructure | first-wave new term (D-5): ships in v2.0.0 if ready, else v2.1.0 |
 
 ### 7.1 Count reconciliation (blocking for migration, see OPEN-QUESTIONS Q11)
 
-The Zenodo record and course description say "55 core terms"; the structured extraction of the source document yields **64 A-Z headings**, three of which are combined pairs (rows 47, 50, 56), plus one Quick-Reference-only term (DOAJ). With all recommended splits and DOAJ added, the launch set is 67 term files. The migration acceptance test (ROADMAP 0.4) enumerates every heading programmatically and cross-checks against the maintainer's own list, so neither "55" nor "64" is silently trusted.
+Decided (D-11, 2026-11-19): the canon is the 64 full entries in the DOCX; the Quick-Reference sheet was an incomplete summary, not the canon. With the two decided splits (rows 50, 56) v2.0.0 ships 66 term files, plus any first-wave entries (D-5) finished in time. The migration acceptance test (ROADMAP 0.4) proves each of the 64 headings maps to a term file or an altLabel; the "55 terms" wording in the Zenodo record description is corrected when v2.0.0 is published; the Quick-Reference sheet is generated from the term files from now on.
 
 ### 7.2 Dangling references (candidate terms referenced but not yet defined)
 
-The v1.0.0 body and see-also lists reference the following concepts that have no entry yet. They live in data/candidates.yaml (valid link targets, but unlinked until real entries exist). Suggested first batch (OPEN-QUESTIONS Q5): Open Data, cOAlition S, Serials Crisis, Publication Bias, DOAJ, Altmetrics, PKP, Open Access Monograph, Retraction Watch, PubPeer.
+The v1.0.0 body and see-also lists reference concepts that have no entry yet. Decided (D-5, 2026-11-19): each is either an alias of an existing term or a backlog entry (docs/BACKLOG-TERMS.md); the build fails on any see-also targeting a term that is not written, so migration removes such links until the entries exist. First wave (v2.0.0 if ready, else v2.1.0): Open Science, Open Data, Open Educational Resources, DOAJ, Publication Bias, Indigenous Data Sovereignty, Serials Crisis / Big Deal, Bibliometrics, Altmetrics, PKP, Retraction Watch / PubPeer. Aliases instead of new terms: Transformative Agreement -> altLabel of Read-and-Publish Agreement; Participatory Research -> altLabel of Co-production; Research Data Management -> altLabel of DMP.
 
 Full list: Altmetrics; arXiv; Bibliometrics; cOAlition S; Community Archive; Digital Heritage; Indigenous Data Sovereignty; Open Access Monograph; Open Cultural Heritage; Open Data; OSF (Open Science Framework); PKP (Public Knowledge Project); Publication Bias; PubPeer; Participatory Research; Retraction Watch; SocArXiv; Think-Check-Submit; Wiki Goes MEK; WikiSource; Wikipedia; ISBN/ISSN (mentioned under PID); RRID (mentioned under PID). All are real, well-documented concepts (each to be verified against its own sources during the writing pass, ROADMAP Phase 4 backlog), defined with their own sources before linking switches on.
 

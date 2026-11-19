@@ -22,3 +22,10 @@ The site must build in 2036 with one academic maintainer who has little time. Re
 - Deployment is uploading a directory; works on GitHub Pages, Codeberg Pages, or a UHH static server unchanged.
 - Taxonomies and multilingual come built in; the interactive layer view stays outside Hugo (ADR-0006).
 - Maintenance cost: one tool, at most one version bump per year (yearly checklist, ROADMAP Phase 6).
+
+## Revision 2026-11-19 (decision D-2)
+
+Confirmed unchanged, with three binding constraints:
+1. The exact Hugo version is pinned both in the CI workflow and stated in the README.
+2. No external Hugo theme: all templates live in this repository.
+3. docs/rebuild.md (ROADMAP 1.7) documents rebuilding the site from the term files and the JSON Schema, so any successor tool can replace Hugo against the same data (ADR-0001).

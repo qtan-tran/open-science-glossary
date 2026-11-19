@@ -1,29 +1,33 @@
 # ADR-0004: Versioning and DOI strategy
 
-Status: proposed · Decides: semver policy, new vs. continued Zenodo record, per-term citability
+Status: accepted, revised 2026-11-19 (maintainer decision D-3; revises the original "new record" proposal during planning review)
 
 ## Context
 
-The glossary must be citable as a whole, per release, and ideally per term. Zenodo's GitHub integration mints a new version DOI and one concept DOI per GitHub release; per their documentation, a repository cannot be attached to an existing concept DOI: versions map to releases (tags) of one connected repository (see Zenodo's GitHub repository integration guide). The v1.0.0 Word/PDF glossary already exists as Zenodo record 10.5281/zenodo.23449750. Making the website v1.1 of that record is not possible mechanically; pretending continuity in numbering would misrepresent what changed (a platform shift, not a patch).
+The glossary must stay citable as a whole and per release. Zenodo's GitHub integration mints each release of a connected repository as a new version of that integration's own record (one concept DOI per repository); per Zenodo's documentation a repository cannot be attached to an existing concept DOI. v1.0.0 (Word/PDF) is Zenodo record 10.5281/zenodo.23449750. The maintainer's decision (D-3): the glossary keeps **one concept DOI from the Word edition onward**.
 
 ## Options considered
 
-1. **New Zenodo record starting at v2.0.0.** Semver's major bump honestly signals "new artifact generation"; cross-link both records via related identifiers ("isNewVersionOf" 10.5281/zenodo.23449750 on the new record; edit the old record to "isPreviousVersionOf"); two concept DOIs, each with an honest citation trail. Recommended.
-2. **Manually upload old file + new site as one record's versions.** Abandons the GitHub integration (the source of the discipline: tagging releases); version DOI belongs to snapshots, not only releases; more manual than automatic.
-3. **Deprecate-and-divert: v2.0.0 site release, old record retains v1.x citations only.** Same as 1 without related identifiers, lost continuity: rejected.
+1. **New Zenodo record via the GitHub integration** (original proposal). Fully automatic per release, but it would break the citation line: a second concept DOI at the platform change, and a record split the maintainer explicitly rejects.
+2. **Keep the existing record: publish v2.0.0+ as new versions of record 10.5281/zenodo.23449750.** New versions are created in the Zenodo web UI ("new version") or via the Zenodo REST API, uploading the release assets per release. The GitHub integration is then not used for publishing at all. **Chosen (D-3).**
 
 ## Decision
 
-1. **New Zenodo record** created automatically by the GitHub integration on the first tagged release, **tagged v2.0.0** (major bump marks the platform change; minor = new terms, patch = corrections).
-2. **Cross-link** the two records via related identifiers, in both directions (new: cites as previous; old: add relatedIdentifier to the new version DOI once first release exists).
-3. **No per-term DOIs**: each term cites its **permanent URL (w3id per ADR-0003) plus the current release version DOI** (e.g. "Tran, Q.-T. (2026). APC. In Open Science Glossary (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.XXXXX + https://w3id.org/os-glossary/term/apc"). Term identity = the permanent URL; the release DOI anchors the exact version cited. Per-term DOIs would multiply maintenance cost against a system designed for per-term stability already (slugs never reused, deprecations remain resolvable).
-4. **Version freeze discipline**: release assets include the rendered site + data exports, so each version DOI resolves to a frozen copy of exactly what was released.
-5. CITATION.cff in the repo root; .zenodo.json overrides if needed (creators with ORCID, license CC BY 4.0, keywords).
+1. **Semver policy:** the first site release is tagged **v2.0.0**. The major bump flags the change of format and data model (Word document -> structured data + website). Minor versions add terms or languages; patches fix content errors. v1.x remains the Word/PDF era.
+2. **One DOI chain:** every release v2.0.0+ is published as a **new version of Zenodo record 10.5281/zenodo.23449750**. The concept DOI therefore covers the whole glossary line from v1.0.0 onward. Record metadata (description wording, e.g. term counts, D-11) is maintained per release.
+3. **Publishing route:** manual upload via the Zenodo web UI or the Zenodo REST API, following the release checklist. Smoke-test the version-workflow on sandbox.zenodo.org before the first real release (per Zenodo guidance). The GitHub integration is NOT connected for publishing, because it cannot attach to the existing record (verified against Zenodo's documentation; see ARCHITECTURE section 4).
+4. **Release assets** per version: built site ZIP, CSV/JSON/SKOS exports, printable Quick-Reference sheet, source snapshot. The rendered site is thereby frozen per version DOI.
+5. **Citation payload:** the whole glossary cites the concept DOI; term pages cite the permanent URL (w3id, ADR-0003) plus the current release's version DOI. **No per-term DOIs** (D-6): term identity is the permanent URL; per-term DOIs would multiply maintenance cost for near-zero citation benefit.
+6. **CITATION.cff** in the repo root carries the concept DOI and per-release version metadata (filled at release time); the Zenodo record title/description stays accurate ("terms" counts corrected at v2.0.0, D-11).
+7. **Software Heritage** archives the git repository per release (ADR-0008); Zenodo keeps the frozen version artefacts. If Zenodo ever forced a record split, cross-link via related identifiers both ways and document it in the README and CHANGELOG.
 
 ## Consequences
 
-- Git history and release tags become the canonical machine-readable version chronicle; CHANGELOG.md is generated per release into the release body.
-- Zenodo sandbox is used first (test with a sandbox copy of the repo) per Zenodo guidance, to avoid live mis-tagging.
-- CHANGELOG entries are hand-curated before tagging, machine-generated content compiled into the release artifacts.
-- Minor caveat: readers citing "the glossary" should cite the concept DOI of the NEW record; documentation (README badge, CONCEPT) will say this explicitly.
-- Old record stays untouched but gains a forward pointer: nothing about v1.0.0 citations breaks.
+- Citation continuity: a reader citing "the Open Science Glossary" uses one stable concept DOI whether they cite v1.0.0 (PDF) or v5.3.0 (site).
+- One manual step per release (create the new version, upload assets, fill metadata; ~10 minutes) replaces the automatic integration. This is the accepted price of the single DOI chain.
+- Tagging discipline remains: semver tags + generated CHANGELOG are the machine-readable chronicle that Zenodo metadata mirrors.
+- Sandbox rehearsal (sandbox.zenodo.org) before v2.0.0 avoids mis-published versions on the live record, which cannot be deleted once public.
+
+## Note on the superseded proposal
+
+The original proposal (new record + cross-linked related identifiers in both directions) is preserved in the PR history of this ADR for the record. It remains the documented fallback if the existing record ever becomes unavailable or unmaintainable.

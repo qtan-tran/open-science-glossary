@@ -1,6 +1,6 @@
 # ARCHITECTURE — Open Science Glossary website
 
-Status: draft for review · Companion: [CONCEPT.md](CONCEPT.md) · [DATA-MODEL.md](DATA-MODEL.md) · [ROADMAP.md](ROADMAP.md)
+Status: approved 2026-11-19 (maintainer review; decisions in [DECISIONS.md](DECISIONS.md)) · Companion: [CONCEPT.md](CONCEPT.md) · [DATA-MODEL.md](DATA-MODEL.md) · [ROADMAP.md](ROADMAP.md)
 
 ## 1. Overview
 
@@ -12,7 +12,7 @@ Status: draft for review · Companion: [CONCEPT.md](CONCEPT.md) · [DATA-MODEL.m
                         |                            (deployable unchanged anywhere)
                         |── exports (Python, pinned) ──> CSV / JSON / SKOS (ttl, jsonld) ──> release assets + site/downloads/
                         `── printable sheet (PDF-ish export of Quick-Reference) ──> release artifact + classroom use
-  releases: tag ──> GitHub Release ──> Zenodo record (concept DOI + version DOI, automatic) ──> Software Heritage archive
+  releases: tag ──> GitHub Release ──> Zenodo record 10.5281/zenodo.23449750 as a NEW VERSION (manual upload or REST API, D-3; not the GitHub integration) ──> Software Heritage archive
   URLs: https://w3id.org/os-glossary/...  ──302──> current host (GitHub Pages today)
 ```
 
@@ -48,9 +48,9 @@ Everything upstream of the build is plain text; everything downstream is generat
 |   |── workflows/              # validate.yml, deploy.yml, release.yml
 |   |── ISSUE_TEMPLATE/        # issue forms: suggest-a-term, report-an-error
 |   `── PULL_REQUEST_TEMPLATE.md, dependabot.yml
-|── legacy/                    # frozen v1.0.0 sources (PDF/DOCX/old tooling); never edited
+|── legacy/                    # frozen v1.0.0 sources (DOCX + PDF export only, no old tooling, D-1); never edited
 |── docs/                      # this planning set + adr/ + rebuild.md (created Phase 1)
-|── CITATION.cff, LICENSE-CONTENT, LICENSE-CODE, .zenodo.json
+|── CITATION.cff, LICENSE-CONTENT, LICENSE-CODE
 |── CONTRIBUTING.md, CODE_OF_CONDUCT.md, GOVERNANCE.md, CHANGELOG.md
 `── README.md
 ```
@@ -77,7 +77,7 @@ Total: **one site generator + three small Python libraries**. That is the entire
 | deploy.yml | push to main | run Hugo build + exports + SVG; upload artefact; deploy Pages; push mirror to Codeberg | site live at version of main |
 | release.yml | tag v* | build; generate CHANGELOG.md from term dates + git history; create GitHub Release with assets (built-site.zip, glossary.csv, glossary.json, os-glossary.ttl, os-glossary.jsonld, quick-reference PDF export); Codeberg mirror tag | GitHub Release page complete |
 
-Manual per release (the only manual steps in the whole system): run the release checklist (docs/rebuild.md, Phase 6): fill date-released + doi in CITATION.cff, publish the GitHub Release (via UI one click or gh release CLI), confirm Zenodo minted the next version DOI, then submit the tag to Software Heritage save-code-now. Rationale for the automation boundary: the Zenodo release integration keys on GitHub Release creation (verified: [Zenodo docs](https://help.zenodo.org/docs/github/)), and DOI-after-release ordering is handled by the CITATION.cff convention.
+Manual per release (the only manual steps in the whole system): run the release checklist (docs/rebuild.md, Phase 6): fill date-released + doi in CITATION.cff, publish the GitHub Release (via UI or gh release CLI), upload the release assets as a new version of Zenodo record 10.5281/zenodo.23449750 (web UI or REST API; smoke-test on sandbox.zenodo.org first, per Zenodo guidance; the GitHub integration would mint a separate record and is not used, D-3/ADR-0004), update the record description wording (e.g. term counts, D-11), then submit the tag to Software Heritage save-code-now. Rationale for the automation boundary: one concept DOI from the Word edition onward is worth one manual upload step per release.
 
 ## 5. URL design and identifiers
 
@@ -123,7 +123,7 @@ plus an APA string, plus "how to cite the whole glossary" (concept DOI) on every
 
 1. **Term slugs** never reused; deprecations keep pages and redirect data (ADR-0003).
 2. **w3id URLs** are the citable canonical everywhere: page footers, exports, schema.org, SKOS IRIs, PDF export footer. Host URLs never appear in printed material.
-3. **Zenodo chain** (ADR-0004): concept DOI = "the glossary"; version DOIs per release; the v1.0.0 Lesson record is related-linked in both directions. Release assets include the built artefacts so the *rendered* site version is archival too.
+3. **Zenodo chain** (ADR-0004, D-3): one concept DOI (10.5281/zenodo.23449750) = "the glossary" from the Word edition onward; version DOIs per release; v2.0.0+ publishes as new versions of that same record. Release assets include the built artefacts so the *rendered* site version is archival too.
 4. **Software Heritage** archives git history per release (ADR-0008), giving SWHIDs for any future "source of this exact page in 2029" question.
 5. **CHANGELOG.md** (generated) documents per-release term-level changes; terms carry date_created / date_last_changed (see DATA-MODEL).
 6. **Old versions viewable**: every Zenodo version DOI freezes the release ZIP (including the built HTML in assets), satisfying "old versions stay viewable" even without hosting old branches.

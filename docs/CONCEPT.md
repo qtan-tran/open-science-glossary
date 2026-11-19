@@ -1,8 +1,8 @@
 # CONCEPT — Open Science Glossary website
 
-Status: draft for review (branch `planning/concept`)
+Status: approved 2026-11-19 (maintainer review; decisions in [DECISIONS.md](DECISIONS.md))
 Owner: Quoc-Tan Tran (ORCID [0000-0003-3533-5858](https://orcid.org/0000-0003-3533-5858))
-Companion docs: [DATA-MODEL.md](DATA-MODEL.md) · [ARCHITECTURE.md](ARCHITECTURE.md) · [ROADMAP.md](ROADMAP.md) · [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md)
+Companion docs: [DATA-MODEL.md](DATA-MODEL.md) · [ARCHITECTURE.md](ARCHITECTURE.md) · [ROADMAP.md](ROADMAP.md) · [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md) · [DECISIONS.md](DECISIONS.md)
 
 ## 1. Background and purpose
 
@@ -99,6 +99,7 @@ The layering shows *where each intervention bites*: pre-registration and Registe
 - Standards exports: SKOS (Turtle/JSON-LD), plain JSON, CSV; schema.org `DefinedTerm` markup.
 - Persistent identifiers: stable term slugs, w3id.org permanent URL layer, Zenodo concept + version DOIs, Software Heritage archival.
 - Contribution workflow (issue forms, PR review), governance and handover documentation, student-contribution guide.
+- Institutional neutrality (ADR-0009): the site, namespace, repository metadata and citations name no institution as host, publisher or affiliation; contributor affiliations are optional and per person.
 
 ## 6. Non-goals
 
@@ -124,4 +125,4 @@ The layering shows *where each intervention bites*: pre-registration and Registe
 - **FORRT Glossary** (verified: [Parsons et al. 2022, *Nature Human Behaviour* 6(3), 312–318](https://doi.org/10.1038/s41562-021-01269-4); glossary at [forrt.org/glossary](https://forrt.org/glossary); licence CC BY-NC-SA 4.0): positioned as complementary; per-term `skos:closeMatch` links planned (ADR-0005).
 - **Wikidata**: per-term `skos:exactMatch` to Wikidata Q-IDs where a solid equivalent concept exists (added field in data model; filled incrementally).
 - **UNESCO Recommendation on Open Science (2021)**: the glossary's stated grounding; cited as a source across entries; the vocabulary could later align its reading of open science taxonomy where overlap exists. (kept as-is from the source document's stated groundings; any restructuring is a later editorial decision)
-- **Zenodo v1.0.0 record** ([10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750), version 1.0.0, published 2026-10-18, resource type "Lesson", CC BY 4.0): continues as the historical record; release/citation strategy in ADR-0004.
+- **Zenodo v1.0.0 record** ([10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750), version 1.0.0, published 2026-10-18, resource type "Lesson", CC BY 4.0): is the record of the whole glossary line: v2.0.0+ publishes as new versions of this same record, keeping one concept DOI from the Word edition onward (D-3, ADR-0004).

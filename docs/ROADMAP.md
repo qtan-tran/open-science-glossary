@@ -1,6 +1,6 @@
 # ROADMAP — Open Science Glossary website
 
-Status: draft for review · Effort units: **S** = one focused working session (up to 2h), **M** = half a day.
+Status: approved 2026-11-19 (maintainer review; decisions in [DECISIONS.md](DECISIONS.md)) · Effort units: **S** = one focused working session (up to 2h), **M** = half a day.
 **[TB]** = teaching blocker: must be finished before the glossary is first assigned to students in the running Winter Semester.
 
 Only phases 0 and 1 are teaching blockers, plus 2.1 (relation *data*, because the equity-session chain is the site's pedagogical core). Everything else can slip a semester without harm.
@@ -9,12 +9,12 @@ Only phases 0 and 1 are teaching blockers, plus 2.1 (relation *data*, because th
 
 | Step | Goal | Tasks | Files | Acceptance criteria | Effort | Skippable? |
 | --- | --- | --- | --- | --- | --- | --- |
-| 0.1 [TB] | Seed repo | Put the frozen sources in version control | legacy/ (v1.0.0 PDF byte-identical to Zenodo, source DOCX, old tooling); README.md, LICENSE-CONTENT (CC BY 4.0), LICENSE-CODE (MIT), minimal GOVERNANCE.md (ADR-0007, OPEN-QUESTIONS Q10) | md5 of legacy PDF matches record 10.5281/zenodo.23449750; licences visible on the repo landing page | S | No |
-| 0.2 | Scaffold data model | Controlled vocabularies live as data files | data/themes.yaml (11 themes), data/relationship-types.yaml (8 types), data/languages.yaml, data/candidates.yaml (dangling refs) | files parse; ids match DATA-MODEL | S | No |
+| 0.1 [TB] | Seed repo | Put the frozen sources in version control | legacy/ (v1.0.0 source DOCX + PDF export only, no old tooling, D-1); README.md, LICENSE-CONTENT (CC BY 4.0), LICENSE-CODE (MIT), short governance section in CONTRIBUTING.md (D-10) | legacy/ committed and never edited again; licences visible on the repo landing page | S | No |
+| 0.2 | Scaffold data model | Controlled vocabularies live as data files | data/themes.yaml (11 themes), data/relationship-types.yaml (8 types), data/languages.yaml (docs/BACKLOG-TERMS.md replaces candidates.yaml: no stubs; dangling refs fail the build, D-5) | files parse; ids match DATA-MODEL | S | No |
 | 0.3 | Schema + validator | Validation exists before content migrates | schemas/term.schema.json, schemas/vocabulary.schema.json, scripts/validate.py, requirements.txt (pinned) | validate.py rejects a deliberately broken sample term and accepts a valid one (smoke test) | S-M | No |
-| 0.4 [TB] | Migration | 1:1 extraction of v1.0.0 into term files (script or semi-manual conversion of the DOCX), front matter minimum: id, title, themes, dates, status, sources, contributors; body conventions preserved (definition / details / warning / see-also as related) | content/terms/*.md, scripts (migration tool kept in legacy/ workflow notes) | every heading extracted and enumerated; counts reconciled with the maintainer's own list (OPEN-QUESTIONS Q11); every see-also target resolves or is in candidates.yaml; 10 random terms eye-checked against the DOCX | M | No |
+| 0.4 [TB] | Migration | 1:1 extraction of v1.0.0 into term files (script or semi-manual conversion of the DOCX), front matter minimum: id, title, themes, dates, status, sources, contributors; body conventions preserved (definition / details / warning / see-also as related) | content/terms/*.md, scripts (migration tool kept in legacy/ workflow notes) | all 64 DOCX headings map to a term file or altLabel (D-11); a scripted word-for-word comparison of DOCX vs. generated output shows no definition text lost; every see-also target resolves (dangling ones removed to docs/BACKLOG-TERMS.md, otherwise the build fails); the Quick-Reference sheet is generated from the term files | M | No |
 | 0.5 [TB] | Theme assignment | Apply the theme table drafted in DATA-MODEL section 7 | content/terms/* | validate passes with themes required | S (with 0.4) | No |
-| 0.6 [TB] | CI hygiene | The repo enforces its own rules | .github/workflows/validate.yml, CITATION.cff, .zenodo.json (related identifier to 10.5281/zenodo.23449750), branch protection, CODEOWNERS | a red PR is blocked and a green one merges; the CFF validates | S | No |
+| 0.6 [TB] | CI hygiene | The repo enforces its own rules | .github/workflows/validate.yml, CITATION.cff (no .zenodo.json and no GitHub integration: publishing stays in record 10.5281/zenodo.23449750, D-3), branch protection, CODEOWNERS | a red PR is blocked and a green one merges; the CFF validates | S | No |
 
 ## Phase 1 — Minimum citable site
 
@@ -24,19 +24,20 @@ Only phases 0 and 1 are teaching blockers, plus 2.1 (relation *data*, because th
 | 1.2 [TB] | No-JS reading core | One "all terms" page (headings + one-line definitions) + per-theme pages; browser in-page search is the JS-off search | layouts | JS-disabled walkthrough: any term findable, every cross-link works | S | No |
 | 1.3 [TB] | Term citations | APA + BibTeX partial per term (release-versioned placeholder until the first DOI mints); footer with the whole-glossary citation | layouts/partials | copied BibTeX parses (generated bib compiles in a CI smoke test) | S | No |
 | 1.4 [TB] | Deploy | Build, deploy to GitHub Pages; Codeberg mirror push job (ADR-0008) | .github/workflows/deploy.yml | live URL serves the built site; local build vs served page diff is clean | S | No |
-| 1.5 | Permanent URLs | Fork perma-id/w3id.org; add ids/os-glossary/.htaccess per ADR-0003 (rules tested); open PR upstream (their guide: docs.w3id.org/guides/create-an-id) | upstream repo only | curl -sIL https://w3id.org/os-glossary/term/apc returns 302 then 200 | S (plus upstream merge wait) | Can slip past semester start: cite the GitHub Pages URL until merged |
-| 1.6 [TB] | First release v2.0.0 | Enable Zenodo integration (sandbox test first, per Zenodo docs); tag v2.0.0; verify concept + version DOIs; edit the old record metadata to link the successor; README badges | tag, CHANGELOG.md (generated) | Zenodo shows correct metadata from CITATION.cff/.zenodo.json; concept DOI resolves to latest; both records cross-link | S | No |
+| 1.5 | Permanent URLs | Namespace os-glossary confirmed unclaimed (live check 2026-11-19, D-7); fork perma-id/w3id.org; add ids/os-glossary/.htaccess per ADR-0003 (rules tested); open PR upstream (their guide: docs.w3id.org/guides/create-an-id) | upstream repo only | curl -sIL https://w3id.org/os-glossary/term/apc returns 302 then 200 | S (plus upstream merge wait) | Can slip past semester start: cite the GitHub Pages URL until merged |
+| 1.6 [TB] | First release v2.0.0 | Tag v2.0.0; publish as a new version of Zenodo record 10.5281/zenodo.23449750 (web UI or REST API, smoke-tested on sandbox.zenodo.org first, D-3); verify the new version DOI under the existing concept DOI; correct the record description wording ("55 terms", D-11); README badges | tag, CHANGELOG.md (generated) | Zenodo shows correct metadata and wording; the concept DOI 10.5281/zenodo.23449750 resolves to the latest version (v2.0.0) | S | No |
 | 1.7 | Rebuild doc | docs/rebuild.md: pinned tools, local build steps, migration story if Hugo dies | docs/rebuild.md | a colleague with no context can follow it | S | Yes (strongly recommended) |
 
 ## Phase 2 — Relationships and layering
 
 | Step | Goal | Tasks | Files | Acceptance criteria | Effort | Skippable? |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2.1 [TB for content] | Relation data | Curate typed relations (start with the three CONCEPT worked examples; 40-60 edges total), one-line reasons, real entries only | content/terms/* | validate passes; the three CONCEPT chains render fully | M | The chains needed for the semester sessions: no |
+| 2.1 [TB for content] | Relation data | Curate typed relations (start with the three CONCEPT worked examples; 40-60 edges total), one-line reasons, real entries only; include the two decided split edges (D-4): Replication --contrasts-with--> Reproducibility, Science Sleuths --is-part-of--> Post-publication peer review | content/terms/* | validate passes; the three CONCEPT chains render fully | M | The chains needed for the semester sessions: no |
 | 2.2 | Relationships table UI | Term pages render the Relationships table (relation, direction, partner, reason) | layouts/partials | screen-reader spot test passes; all edges visible bidirectionally | S | No |
 | 2.3 | Layer pages (static) | scripts/build_layers.py produces per-theme-pair pages: filtered term list + SVG (deterministic layout) + edge table | scripts/build_layers.py, generated layer pages | pages exist for every 2-theme pair (55 pairs); contrast checked; zero JS | M | Yes (the semester can live without the visuals) |
 | 2.4 | JS filter enhancement | One vanilla-JS file: theme multi-select filtering over embedded JSON | assets/layers.js | with JS: filtering works; without JS: all content present | S-M | Yes |
 | 2.5 | Theme-page relation digests | Theme pages show outgoing edge counts per other theme | layouts | spot-checked counts match the data | S | Yes |
+| 2.6 | First-wave new terms | Write full entries for the 11-term first wave (D-5, docs/BACKLOG-TERMS.md): Open Science, Open Data, Open Educational Resources, DOAJ, Publication Bias, Indigenous Data Sovereignty, Serials Crisis/Big Deal, Bibliometrics, Altmetrics, PKP, Retraction Watch/PubPeer; apply the three alias decisions | content/terms/* | validate passes; first-wave terms ship in v2.0.0 if finished in time, else v2.1.0 | M | Yes (target v2.1.0) |
 
 ## Phase 3 — Interoperability
 
@@ -54,14 +55,14 @@ Only phases 0 and 1 are teaching blockers, plus 2.1 (relation *data*, because th
 | 4.1 | Issue forms | GitHub issue forms: suggest-a-term, report-an-error | .github/ISSUE_TEMPLATE/* | submitting a form yields a complete structured issue | S | No (low cost) |
 | 4.2 | Contribution docs | CONTRIBUTING.md (incl. CC BY 4.0 ack), PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md, docs/students.md (course assignment flow) | root, docs | a student with no git experience follows the guide to a mergable PR in the pilot session | M | Yes, until a cohort arrives |
 | 4.3 | Review status workflow | status draft->reviewed transitions documented; "reviewed" badge on term pages; GOVERNANCE extended when others join | docs, layouts | a draft term separates visually from reviewed ones (including exports) | S | Yes |
-| 4.4 | Pilot cohort | One seminar session: students pick candidates.yaml terms, draft via forms/PRs, peer-review in pairs, maintainer merges | docs/students.md | at least 3 student-authored merged terms with ORCIDs; candidate backlog reduced | course time | Yes |
+| 4.4 | Pilot cohort | One seminar session: students pick docs/BACKLOG-TERMS.md terms, draft via forms/PRs, peer-review in pairs, maintainer merges | docs/students.md | at least 3 student-authored merged terms with ORCIDs; docs/BACKLOG-TERMS.md reduced | course time | Yes |
 
 ## Phase 5 — Multilingual
 
 | Step | Goal | Tasks | Files | Acceptance criteria | Effort | Skippable? |
 | --- | --- | --- | --- | --- | --- | --- |
 | 5.1 | i18n scaffolding | Hugo multilingual config (ADR-0002); language switcher; fallback rules (missing translation -> English + notice, no broken pages) | site config, layouts | a *.de.md file renders a DE page; a term without one renders EN with the notice | S | No (when Phase 5 starts) |
-| 5.2 | Pilot batch | Translate the ~12-term pilot (OPEN-QUESTIONS Q9: publishing + policy core), reviewed by a German-language reader | content/terms/*.de.md | pilot terms display in DE; SKOS export carries de labels for them | M | Yes |
+| 5.2 | Pilot batch | Translate the 12-term pilot (D-9: APC, Diamond/Gold/Green OA, Embargo Period, Secondary Publication Right (Zweitveröffentlichungsrecht), Plan S, DORA, CoARA, Read-and-Publish (DEAL), Repository, DOI), native-speaker review required | content/terms/*.de.md | pilot terms display in DE; SKOS export carries de labels; no translation shows as reviewed without native-speaker sign-off (D-9) | M | Yes |
 | 5.3 | Expansion | Recurring batches (one per semester, possibly coursework) | content/ | DE coverage grows; untranslated share visible on the index | ongoing | - |
 
 ## Phase 6 — Long-term care
@@ -96,5 +97,5 @@ Week 1: 0.1-0.3 + merge this planning PR (review)
 Week 2: 0.4-0.6, 1.1-1.2
 Week 3: 1.3-1.4, 2.1 (relation data for the seminar chains), start the w3id PR (1.5)
 Before first classroom assignment: 1.6 (v2.0.0 release) -> the site is citable
-After the semester: 2.3-2.5 (visual layering), 3.x (exports), Phase 4 with the next cohort
+After the semester: 2.3-2.6 (visual layering + first wave), 3.x (exports), Phase 4 with the next cohort
 ```

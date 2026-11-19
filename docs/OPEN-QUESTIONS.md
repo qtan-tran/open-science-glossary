@@ -1,5 +1,7 @@
 # OPEN QUESTIONS — decisions only the maintainer can make
 
+> **RESOLVED 2026-11-19.** All eleven questions are decided; the answers, including small deviations from the recommendations below (notably Q3 and Q5), are recorded in [DECISIONS.md](DECISIONS.md), plus one additional rule: D-12 institutional neutrality (ADR-0009). This file is kept unchanged as the review record.
+
 Each item carries a recommendation. Nothing blocks on these except Q1/Q2 before Phase 0/1 implementation starts.
 
 ## Q1. The repo is currently empty. Where do the v1.0.0 sources live?
