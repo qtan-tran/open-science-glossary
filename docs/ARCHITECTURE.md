@@ -98,7 +98,7 @@ Permanent URL layer (ADR-0003), one .htaccess under ids/os-glossary/ in the [per
 # https://w3id.org/os-glossary/ -> current host (GitHub Pages today)
 Options +FollowSymLinks
 RewriteEngine on
-RewriteRule ^(.*)$ https://qtan-tran.github.io/open-science-glossary/%%1 [R=302,L]
+RewriteRule ^(.*)$ https://qtan-tran.github.io/open-science-glossary/$1 [R=302,L]
 
 ## Contact
 # Maintainer: Quoc-Tan Tran, github.com/qtan-tran, ORCID 0000-0003-3533-5858
@@ -110,7 +110,7 @@ Citation payload every term page carries (auto-generated from release metadata):
 @misc{osg_apc_2_0_0,
   author = {Tran, Quoc-Tan},
   title  = {{APC (Article Processing Charge)}},
-  howpublished = {In \\emph{Open Science Glossary} (v2.0.0)},
+  howpublished = {In \emph{Open Science Glossary} (v2.0.0)},
   year   = {2027},
   doi    = {10.5281/zenodo.XXXXXXX},       <- version DOI, minted automatically after release
   url    = {https://w3id.org/os-glossary/term/apc}
