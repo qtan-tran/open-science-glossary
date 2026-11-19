@@ -46,7 +46,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Lint term files
-        run: python3 scripts/validate.py content/terms
+        run: |
+          if ! ls content/terms/*.md >/dev/null 2>&1; then
+            echo "content/terms not created yet; skipping"
+            exit 0
+          fi
+          python3 scripts/validate.py content/terms
 
   migration-acceptance:
     runs-on: ubuntu-latest
