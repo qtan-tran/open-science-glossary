@@ -171,6 +171,8 @@ def split_entries(seq):
             if seq[j][0] != "p":
                 break
             t = seq[j][1].strip()
+            if t.startswith("Quick-Reference"):  # cheat-sheet table header; not entry text (D-11)
+                break
             if t:
                 paras.append(t)
         entries[title] = {"pos": pos, "paras": paras}
