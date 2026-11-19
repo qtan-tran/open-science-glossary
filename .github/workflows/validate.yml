@@ -15,7 +15,7 @@ jobs:
   data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -45,7 +45,7 @@ jobs:
   validate-terms:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     # Word-for-word gate against the legacy DOCX (D-11); runs once legacy/ exists.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -84,7 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     # Site must build with the pinned Hugo before anything deploys (D-2).
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install pinned Hugo
         run: |
           curl -sL -o hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
