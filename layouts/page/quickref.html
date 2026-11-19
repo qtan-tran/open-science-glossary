@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>Quick reference</h1>
+<p>One line per term, generated from the term files (D-11): the backup of the v1.0.0 cheat sheet and what future cheat-sheet exports are built from. In-page find (Ctrl/Cmd+F) works without JavaScript.</p>
+<table class="quickref">
+  <thead><tr><th>Term</th><th>One line</th></tr></thead>
+  <tbody>
+    {{ range sort (where site.RegularPages "Section" "terms") "Title" }}
+      {{ $first := "" }}
+      {{ $bits := split .Plain "." }}
+      {{ if gt (len $bits) 0 }}{{ $first = index $bits 0 }}{{ end }}
+      <tr>
+        <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+        <td>{{ $first }}.</td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+{{ end }}

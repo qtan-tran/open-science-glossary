@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}A machine-readable, citable glossary of open science terms.{{ end }}">
+<link rel="stylesheet" href="{{ (resources.Get "css/main.css" | minify | fingerprint).RelPermalink }}">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav aria-label="Site">
+    <a class="brand" href="{{ "" | relURL }}">{{ site.Title }}</a>
+    <a href="{{ "terms/" | relURL }}">A-Z</a>
+    <a href="{{ "quick-reference/" | relURL }}">Quick reference</a>
+    <a href="{{ "theme/" | relURL }}">Themes</a>
+    <a href="{{ "about/" | relURL }}">About</a>
+  </nav>
+</header>
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+<footer class="site-footer">
+  {{ partial "footer" . }}
+</footer>
+</body>
+</html>

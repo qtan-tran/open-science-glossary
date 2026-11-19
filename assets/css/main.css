@@ -1,0 +1,37 @@
+/* Open Science Glossary, Phase 1: one small file, system fonts, no JS (ADR-0006). */
+:root { --ink: #1a1a1a; --bg: #fdfdfc; --line: #d8d5cd; --accent: #0f5d5a; --soft: #f4f2ec; }
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body { margin: 0; color: var(--ink); background: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+a { color: var(--accent); }
+a:focus-visible, .skip-link:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
+.skip-link { position: absolute; left: -9999px; background: var(--soft); padding: .5rem 1rem; }
+.site-header { border-bottom: 2px solid var(--accent); background: var(--soft); }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline;
+  max-width: 60rem; margin: 0 auto; padding: .6rem 1rem; font-size: 1.05rem; }
+.brand { font-weight: 700; text-decoration: none; }
+main { max-width: 60rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+h1, h2, h3 { line-height: 1.25; }
+.term header h1 { margin-bottom: .2rem; }
+.alt, .small { color: #55524b; font-size: .92rem; }
+.status.draft, .status.reviewed { display: inline-block; border: 1px solid var(--line);
+  border-radius: .5rem; padding: .05rem .55rem; font-size: .8rem; background: var(--soft); }
+.chip { display: inline-block; background: var(--soft); border: 1px solid var(--line);
+  border-radius: 1rem; padding: .05rem .6rem; font-size: .85rem; margin: .1rem .1rem .1rem 0;
+  text-decoration: none; }
+ul.az { list-style: none; padding-left: 0; }
+ul.az li { padding: .15rem 0; border-bottom: 1px dotted var(--line); }
+h2[id^="letter-"] { margin-top: 1.6rem; }
+.alert { border-left: .35rem solid #a04c00; background: #faf3ea; padding: .6rem 1rem; margin: 1rem 0; }
+.alert .alert-title { margin: 0 0 .2rem; font-weight: 700; color: #7a3900; }
+table { border-collapse: collapse; width: 100%; margin: .5rem 0; }
+th, td { border: 1px solid var(--line); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+.citation { background: var(--soft); border: 1px solid var(--line); border-radius: .4rem; padding: .75rem 1rem; }
+.citation pre { overflow-x: auto; background: #fff; padding: .5rem; border: 1px solid var(--line); }
+.hint { color: #55524b; }
+.site-footer { border-top: 2px solid var(--accent); background: var(--soft); }
+.site-footer > * { max-width: 60rem; margin: .6rem auto; padding: 0 1rem; font-size: .9rem; }
+@media print { body { font-size: 11pt; } .site-header, .site-footer, .skip-link { display: none; } a { color: inherit; } }

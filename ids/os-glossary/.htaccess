@@ -1,0 +1,12 @@
+# Open Science Glossary permanent identifier namespace (w3id.org)
+# Maintainer: Quoc-Tan Tran (GitHub: qtan-tran, ORCID: 0000-0003-3533-5858)
+# This file mirrors the version submitted to perma-id/w3id.org (ADR-0003).
+Options +FollowSymLinks
+RewriteEngine on
+
+# Namespace root -> glossary home
+RewriteRule ^os-glossary/?$ https://qtan-tran.github.io/open-science-glossary/ [R=302,L]
+
+# Everything under the namespace keeps its path on the current host
+# (term pages: /term/<slug>/, theme pages: /theme/<id>/, downloads: /downloads/)
+RewriteRule ^os-glossary/(.*)$ https://qtan-tran.github.io/open-science-glossary/$1 [R=302,L]

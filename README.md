@@ -13,11 +13,16 @@ as `alternatives` so existing links keep resolving.
 ## Status
 
 - Planning: complete (docs/, ADRs 0001-0009, decisions D-1 to D-12; PR #1).
-- Phase 0: tooling done. One data file per term in `content/terms/`, controlled
-  vocabularies, JSON Schema, stdlib-only migration and validation scripts (no
-  third-party dependencies; see requirements.txt).
-- Phase 1 (next): Hugo site skeleton, pinned exact version (recorded here and
-  in CI), templates kept in-repo, no external themes.
+- Phase 0: complete (PR #2). 66 term files migrated from the v1.0.0 DOCX,
+  machine-verified word-for-word; stdlib-only migration and validation tooling.
+- Phase 1: site skeleton complete (this PR). Hugo v0.170.0 (exact version
+  pinned in CI and in the checksummed download; D-2), templates in-repo, no
+  external themes, no JavaScript for the reading core (ADR-0006). Term pages
+  at /term/<slug>/, themes at /theme/<id>/, A-Z index, /quick-reference/
+  generated from the term files (D-11), per-term APA + BibTeX citations
+  (concept DOI until the first version DOI mints, D-6), BibTeX export of all
+  terms, GitHub Pages deploy workflow, and the w3id .htaccess ready for the
+  upstream registration (ADR-0003).
 
 ## Repository map
 
@@ -31,6 +36,10 @@ schemas/vocabulary.schema.json  JSON Schema for a vocabulary YAML file
 scripts/migrate_v1.py     one-shot migration from the legacy DOCX into term files
 scripts/check_migration.py Phase 0 acceptance gate (headings map, word-for-word check; D-11)
 scripts/validate.py       lint term files (slug/theme/relation rules, D-5 fail-hard)
+scripts/export_bib.py     BibTeX export of all terms (same entries the site renders)
+layouts/, assets/, hugo.toml  the site; one small CSS file, zero JS (ADR-0006)
+.github/workflows/        validate.yml (data + build gates), deploy.yml (Pages)
+ids/os-glossary/          mirror of the w3id.org redirect registration (ADR-0003)
 legacy/                   v1.0.0 DOCX + PDF export; the record of the original
                           publication; never edited after commit (D-1)
 docs/                     planning: concept, data model, architecture, roadmap,
@@ -44,9 +53,19 @@ Python 3.9+ standard library only, no installs required:
 
 ```bash
 python3 scripts/validate.py content/terms
+python3 scripts/export_bib.py content/terms static/downloads/open-science-glossary.bib
 python3 scripts/check_migration.py legacy/OpenScience_Glossary.docx content/terms
 python3 scripts/migrate_v1.py legacy/OpenScience_Glossary.docx content/terms --report docs/migration-report.md
 ```
+
+Build the site with the pinned generator (v0.170.0; D-2):
+
+```bash
+hugo --minify --printPathWarnings   # static output in public/, no JS, no themes
+```
+
+Everything above is standard-library Python plus the single pinned Hugo binary;
+no package installs (requirements.txt stays empty).
 
 CI (`.github/workflows/validate.yml`) runs the validator and the schema/vocabulary
 checks on every push and pull request. Any `related` entry pointing at a term
