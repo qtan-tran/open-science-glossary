@@ -19,8 +19,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "contrasts-with"
   target: "accepted-manuscript"
+  reason: "Two versions of the same paper: publisher typeset VoR vs the author's final peer-reviewed text."
 - type: "related"
   target: "green-oa"
 - type: "related"

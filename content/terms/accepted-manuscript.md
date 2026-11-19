@@ -22,8 +22,9 @@ contributors:
 related:
 - type: "related"
   target: "embargo-period"
-- type: "related"
+- type: "is-part-of"
   target: "green-oa"
+  reason: "The accepted manuscript is the version authors may usually self-archive (CONCEPT worked example 2)."
 - type: "related"
   target: "version-of-record"
 ---

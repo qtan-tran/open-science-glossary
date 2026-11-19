@@ -24,8 +24,9 @@ related:
   target: "pre-registration"
 - type: "related"
   target: "registered-reports"
-- type: "related"
+- type: "contributes-to"
   target: "replication-crisis"
+  reason: "Hypothesising after results are known is a documented driver of replication failures (CONCEPT worked example 3)."
 ---
 
 The undisclosed practice of presenting post-hoc hypotheses as if they had been formulated before data collection began; making exploratory findings appear confirmatory. Coined by Norbert Kerr (1998).

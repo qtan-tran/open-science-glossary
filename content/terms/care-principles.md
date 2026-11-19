@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "responds-to"
   target: "fair-principles"
+  reason: "CARE complements FAIR, which does not address Indigenous data governance."
 ---
 
 A framework for Indigenous Data Governance developed by the Global Indigenous Data Alliance (Carroll et al., 2020). CARE stands for:

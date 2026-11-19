@@ -16,12 +16,14 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "responds-to"
   target: "harking"
+  reason: "Pre-registration commits to hypotheses before data collection (CONCEPT worked example 3)."
 - type: "related"
   target: "p-hacking"
-- type: "related"
+- type: "is-part-of"
   target: "registered-reports"
+  reason: "Registered Reports embed pre-registration in a journal workflow."
 - type: "related"
   target: "replication-crisis"
 ---

@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "harking"
-- type: "related"
+- type: "responds-to"
   target: "p-hacking"
+  reason: "Registered Reports review the plan before data collection, removing post-hoc flexibility (CONCEPT worked example 3)."
 - type: "related"
   target: "pre-registration"
 ---

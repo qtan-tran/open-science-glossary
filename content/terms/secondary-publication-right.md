@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "accepted-manuscript"
-- type: "related"
+- type: "constrains"
   target: "embargo-period"
+  reason: "Section 38 UrhG permits deposit after 12 months regardless of contract (CONCEPT worked example 2)."
 - type: "related"
   target: "green-oa"
 ---

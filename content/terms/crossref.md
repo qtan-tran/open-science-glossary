@@ -18,8 +18,9 @@ contributors:
 related:
 - type: "related"
   target: "datacite"
-- type: "related"
+- type: "enables"
   target: "doi"
+  reason: "Registration agencies such as Crossref issue and maintain DOIs for scholarly outputs."
 - type: "related"
   target: "pid"
 ---

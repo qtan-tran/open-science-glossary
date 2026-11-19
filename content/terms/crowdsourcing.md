@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "enables"
   target: "citizen-science"
+  reason: "Many citizen-science projects crowdsource tasks to online volunteers."
 - type: "related"
   target: "zooniverse"
 ---

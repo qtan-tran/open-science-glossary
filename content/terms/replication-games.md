@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "responds-to"
   target: "replication-crisis"
+  reason: "Replication Games crowdsource replication as an integrity intervention (CONCEPT worked example 3)."
 - type: "related"
   target: "reproducibility"
 ---

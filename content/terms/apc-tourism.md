@@ -19,8 +19,9 @@ contributors:
 related:
 - type: "related"
   target: "apc"
-- type: "related"
+- type: "contributes-to"
   target: "epistemic-injustice"
+  reason: "APC-funded openness can reinforce rather than reduce global inequities (CONCEPT worked example 1)."
 - type: "related"
   target: "transformative-agreement"
 ---

@@ -25,6 +25,13 @@ related:
   target: "gold-oa"
 - type: "related"
   target: "transformative-agreement"
+- type: "constrains"
+  target: "embargo-period"
+  reason: "Plan S funders permit no embargo for funded research (CONCEPT worked example 2)."
+- type: "constrains"
+  target: "hybrid-oa"
+  reason: "Plan S treats plain hybrid OA as non-compliant for funded work; only transformative agreements qualify."
+
 ---
 
 A set of open access principles launched in 2018 by cOAlition S; a group of national research funders (including Wellcome Trust, UKRI, and many European national agencies); requiring that all research they fund must be immediately and fully open access upon publication, with no embargo period, under a CC BY licence.

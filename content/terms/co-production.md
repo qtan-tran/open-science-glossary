@@ -21,8 +21,9 @@ contributors:
 related:
 - type: "related"
   target: "citizen-science"
-- type: "related"
+- type: "responds-to"
   target: "epistemic-injustice"
+  reason: "Co-production is one practice answer to excluding non-academic knowers."
 ---
 
 A research approach in which communities participate in defining research questions, designing methods, and interpreting results; not merely receiving the outputs. Distinguished from “consultation” (where communities are asked for input but researchers retain decision-making power).

@@ -17,8 +17,9 @@ contributors:
   orcid: "0000-0003-3533-5858"
   role: "author"
 related:
-- type: "related"
+- type: "responds-to"
   target: "apc"
+  reason: "Fee waivers and discounts are publishers' mechanism for the cost barrier APCs create for lower-income authors."
 - type: "related"
   target: "diamond-oa"
 ---

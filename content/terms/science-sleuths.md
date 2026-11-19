@@ -21,11 +21,16 @@ contributors:
 related:
 - type: "related"
   target: "open-peer-review"
-- type: "related"
+- type: "responds-to"
   target: "paper-mill"
+  reason: "Sleuths detect and publicise paper-mill products."
 - type: "is-part-of"
   target: "post-publication-peer-review"
   reason: "The sleuths are the actors whose public checking constitutes a large share of post-publication peer review in practice (D-4)."
+- type: "responds-to"
+  target: "replication-crisis"
+  reason: "The sleuths' public checking is post-publication correction in practice (CONCEPT worked example 3)."
+
 ---
 
 Loosely organised communities of researchers, statisticians, and image analysts who identify errors, data manipulation, or fraud in published papers and report them publicly (via PubPeer, Retraction Watch) or to journals and institutions.
