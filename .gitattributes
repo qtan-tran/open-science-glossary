@@ -1,0 +1,2 @@
+# legacy/ holds the byte-exact v1.0.0 record (D-1): never let git touch it.
+legacy/** -text -diff -merge=ours
