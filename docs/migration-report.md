@@ -130,4 +130,3 @@
 - Springer Nature: 2 definition paragraphs (joined)
 - Version of Record (VoR): 2 definition paragraphs (joined)
 - Wikimedia Commons: 2 definition paragraphs (joined)
-- Zooniverse: 3 definition paragraphs (joined)

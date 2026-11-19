@@ -23,7 +23,7 @@ related:
   target: "crowdsourcing"
 ---
 
-The world’s largest citizen science and citizen humanities platform, hosted at zooniverse.org. Zooniverse allows researchers to build “projects” that present tasks (classifying images, transcribing text, marking objects) to thousands of online volunteers. Quick-Reference All key terms defined in short; skim this before your first session.
+The world’s largest citizen science and citizen humanities platform, hosted at zooniverse.org. Zooniverse allows researchers to build “projects” that present tasks (classifying images, transcribing text, marking objects) to thousands of online volunteers.
 
 ## Details
 
