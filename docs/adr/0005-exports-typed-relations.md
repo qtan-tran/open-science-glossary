@@ -8,8 +8,8 @@ The glossary's value compounds if it interops with the scholarly web: library an
 
 ## Options considered
 
-1. **Full custom RDF vocabulary** (own ontology): rejected; overkill for a glossary,/testify-work hallmark of overengineering.
-2. **SKOS only, relay on skos:related for all relations**: insufficient, loses the interaction semantics at the core of this project.
+1. **Full custom RDF vocabulary** (own ontology): rejected; overkill for a glossary and a hallmark of overengineering.
+2. **SKOS only, relying on skos:related for all relations**: insufficient, loses the interaction semantics at the core of this project.
 3. **Typed closed set of relations, mapped to SKOS + schema.org light: chosen.**
 
 ## Decision
@@ -29,15 +29,15 @@ The glossary's value compounds if it interops with the scholarly web: library an
 
    Namespace osg: = https://w3id.org/os-glossary/vocab/ (redirects to a small vocabulary page). Relations on term pages always carry a human-readable reason, so the network view is pedagogically meaningful.
 
-2. **SKOS export via rdflib** (Python): one ConceptScheme = the glossary; each term = skos:Concept with skos:definition, skos:altLabel (abbreviations, e.g. "APC"), multilingual prefLabel per skosxl where language-specific labels exist (a prefLabel@en plus prefLabel@de when the German translation exists); themes = skos:Collection instances. Published as Turtle + JSON-LD alongside each release.
+2. **SKOS export via rdflib** (Python): one ConceptScheme = the glossary; each term = skos:Concept with skos:definition, skos:altLabel (abbreviations, e.g. "APC"), language-tagged prefLabel (en now, de when the German translation exists); themes = skos:Collection instances. Published as Turtle + JSON-LD alongside each release.
 
-3. **JSON + CSV exports** for non-specialists (CSV: term, definition, themes, relations flattened; per-language columns, machine-readable from data, not hand-maintained).
+3. **JSON + CSV exports** for non-specialists (CSV: term, definition, themes, relations flattened; per-language columns), generated from the data files, never hand-maintained.
 
 4. **schema.org DefinedTerm / DefinedTermSet JSON-LD** embedded in each term page and the glossary root; terms link to their permanent URLs (ADR-0003) as url and to the release via isPartOf -> DefinedTermSet with the Zenodo version DOI.
 
 5. **External mappings, per term, optional fields:**
-   - matches.wikidata: skos:exactMatch to the entity's URI (skos:exactMatch used sparingly; only when Wikidata covers the same concept, else omitted)
-   - matches.forrt: skos:closeMatch to the FORRT glossary URL (FRO:xxxxxxx reference). Their CC BY-NC-SA means we never copy their text, only link.
+   - matches.wikidata: skos:exactMatch to the entity's URI (used sparingly; only when Wikidata covers the same concept, else omitted)
+   - matches.forrt: skos:closeMatch to the FORRT glossary entry. Their CC BY-NC-SA means we never copy their text, only link.
 
 6. Where no exact equivalent exists (several of our humanities/equity terms), no mapping: absence is better than a wrong link.
 
