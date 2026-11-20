@@ -51,6 +51,10 @@ as `alternatives` so existing links keep resolving.
   on 2026-11-20, drafted and maintainer-reviewed the same day
   (status `reviewed`; see docs/BACKLOG-TERMS.md for the slug list and the
   rejected-proposal list).
+- Phase 2 fourth wave: the five remaining deferred terms (Wikipedia, Wiki
+  Goes MEK, Open Cultural Heritage, Digital Heritage, OA monograph)
+  drafted on 2026-11-20, status `draft` pending maintainer review, plus a
+  fact-check pass over the third-wave entries (see docs/BACKLOG-TERMS.md).
 
 ## Repository map
 
