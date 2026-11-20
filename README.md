@@ -4,6 +4,22 @@ A bilingual (English first, German pilot planned), machine-readable glossary of
 open science terms, evolved from the Word/PDF edition v1.0.0
 ([Zenodo concept DOI 10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750), CC BY 4.0).
 
+## Read the glossary
+
+**Website: <https://qtan-tran.github.io/open-science-glossary/>**
+(live as soon as the Pages source is set to "GitHub Actions";
+see [issue #8](https://github.com/qtan-tran/open-science-glossary/issues/8)).
+
+Nothing to install and nothing to run: the site is plain HTML and CSS,
+generated ahead of time and served by GitHub Pages. Any browser opens the
+A-Z index, every term page (/term/<slug>/), the theme pages and the
+quick-reference sheet. A BibTeX export of all terms is downloadable at
+/downloads/open-science-glossary.bib, and the original v1.0.0 edition
+(DOCX + PDF) stays in the
+[Zenodo record](https://doi.org/10.5281/zenodo.23449750).
+The Python and Hugo commands further below are maintainer tooling only;
+readers never need them.
+
 The canon is the 64 full entries of the v1.0.0 Word edition. After the D-4
 splits (Replication / Reproducibility; Science Sleuths / Post-Publication Peer
 Review) that is 66 term files in v2.0.0, plus first-wave new terms
@@ -51,7 +67,11 @@ docs/                     planning: concept, data model, architecture, roadmap,
                           backlog terms, ADRs, rebuild notes
 ```
 
-## Working on the repo
+## Maintainer toolkit (readers can skip this)
+
+Everything in this section is only needed to edit and re-verify the glossary.
+CI runs the same checks on every push and pull request, so contributors do
+not need Python or Hugo installed on their own machines either.
 
 Python 3.9+ standard library only, no installs required:
 
