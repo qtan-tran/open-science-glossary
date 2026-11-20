@@ -6,10 +6,11 @@
 </p>
 <p id="site-citation">
   Cite the glossary: Tran, Q.-T. (2026). <em>{{ site.Title }}</em> (Version {{ site.Params.version }}). Zenodo.
-  <a href="{{ site.Params.conceptDOIURL }}">https://doi.org/{{ site.Params.conceptDOI }}</a>
+  <a href="{{ site.Params.versionDOIURL }}">https://doi.org/{{ site.Params.versionDOI }}</a>
+  (all versions resolve from the concept DOI <a href="{{ site.Params.conceptDOIURL }}">10.5281/zenodo.23449749</a>)
 </p>
 <p>
   Term URLs are permanent via <a href="https://w3id.org/">w3id.org</a>: <code>{{ site.Params.permanentBase }}/term/apc</code>.
-  {{ if $pre }}Until the redirect is registered, resolve them on <a href="{{ site.Params.hostURL }}">this host</a>.{{ end }}
+  Until the redirect is registered, resolve them on <a href="{{ site.Params.hostURL }}">this host</a>.
   · {{ site.Params.langNote }}
 </p>

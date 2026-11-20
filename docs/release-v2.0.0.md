@@ -1,5 +1,15 @@
 # Release checklist: v2.0.0 as a new version of the existing Zenodo record
 
+EXECUTED on 2026-11-20. Two findings from the actual release run:
+
+1. The Zenodo record's concept DOI is 10.5281/zenodo.23449749
+   (conceptrecid 23449749). The number 10.5281/zenodo.23449750 used
+   throughout earlier docs is the **version DOI of v1.0.0**, not the concept
+   DOI. All in-repo citations were corrected at release time.
+2. Per maintainer decision, the sandbox smoke test (step 1 of the upload
+   procedure) was skipped; the REST API calls were run directly against
+   zenodo.org. The new version DOI is 10.5281/zenodo.24396086.
+
 Per docs/DECISIONS.md D-3 (one concept DOI for all versions, from the Word
 edition onward; the GitHub-Zenodo integration is deliberately NOT used) and
 D-11 (correct the "55 terms" wording at release time). Do not tag or upload
