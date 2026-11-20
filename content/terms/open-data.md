@@ -3,7 +3,7 @@ id: "open-data"
 title: "Open Data"
 themes:
 - "data"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -33,7 +33,7 @@ Research data that anyone can freely access, use, modify and share for any purpo
 
 ## Details
 
-- First-wave new entry (D-5): draft awaiting maintainer review
+- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - In practice: data deposited in a repository under an open licence (often CC0 or CC BY), with sufficient documentation and preferably a persistent identifier such as a DOI
 - The licence matters: "available on request" or a deposit without a licence is not open data
 - Personal, sensitive or Indigenous data can be FAIR without being fully open; CARE and data-sovereignty constraints legitimately limit openness

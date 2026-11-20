@@ -21,7 +21,8 @@ Zenodo concept DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.2344
   migration and validation scripts, CI gates on every push and pull request.
 - Typed relationships between terms (PR #9): is-part-of, responds-to,
   enables, contributes-to, constrains, contrasts-with.
-- First-wave new terms (D-5), `draft` status until reviewed: Open Science,
+- First-wave new terms (D-5), maintainer-reviewed on 2026-11-20 (status
+  `reviewed`): Open Science,
   Open Data, Open Educational Resources, DOAJ, Publication Bias, Indigenous
   Data Sovereignty, Serials Crisis / Big Deal, Bibliometrics, Altmetrics,
   PKP, Retraction Watch, PubPeer (12 files; Retraction Watch and PubPeer

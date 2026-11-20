@@ -42,7 +42,8 @@ as `alternatives` so existing links keep resolving.
   terms, GitHub Pages deploy workflow, and the w3id .htaccess ready for the
   upstream registration (ADR-0003).
 - Phase 2 first wave: the eleven D-5 terms drafted (12 files, Retraction Watch
-  and PubPeer split per D-4 practice), status `draft` until maintainer review.
+  and PubPeer split per D-4 practice), maintainer-reviewed on 2026-11-20
+  (status `reviewed`).
 
 ## Repository map
 

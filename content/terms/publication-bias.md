@@ -3,7 +3,7 @@ id: "publication-bias"
 title: "Publication Bias"
 themes:
 - "integrity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,7 @@ The systematic tendency for studies with positive, "significant" results to be p
 
 ## Details
 
-- First-wave new entry (D-5): draft awaiting maintainer review
+- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - Related biases compound it: outcome reporting bias (selective reporting of measured outcomes) and citation bias (positive results are also cited more)
 - Detectable statistically in a research field via funnel-plot asymmetry and related tests in meta-analysis
 - Countermeasures: pre-registration, registered reports, mandates to publish results of all funded studies, and trial registries with legally required summary posting
