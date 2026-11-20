@@ -40,10 +40,11 @@ day (status `reviewed`): `content/terms/coalition-s.md`, `copyright-transfer.md`
 `think-check-submit.md`, `data-steward.md`, `open-notebook-science.md`,
 `pci.md`, `unpaywall.md`, `oa-button.md`.
 
-## Third wave / one batch (maintainer-approved 2026-11-20, status `draft`)
+## Third wave / one batch (maintainer-approved 2026-11-20, status `reviewed`)
 
-Forty-one new entries drafted on 2026-11-20 as `draft`, awaiting
-maintainer review:
+Forty-one new entries drafted and maintainer-reviewed on 2026-11-20
+(status `reviewed`; post-publication-peer-review was also reviewed in
+the same pass):
 
 - Preprints & preservation: `biorxiv.md`, `medrxiv.md`, `openrxiv.md`,
   `lockss.md`, `clockss.md`

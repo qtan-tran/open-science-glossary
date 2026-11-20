@@ -24,8 +24,7 @@ Zenodo concept DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.2344
   Wikisource, OSF, arXiv, SocArXiv, Think. Check. Submit., Data Steward,
   Open Notebook Science, Peer Community In (PCI), Unpaywall, OA Button
   (16 new entries total).
-- Third-wave new terms, maintainer-approved in one batch on 2026-11-20
-  (status `draft`, awaiting review): bioRxiv, medRxiv, openRxiv, LOCKSS,
+- Third-wave new terms, maintainer-approved and reviewed 2026-11-20: bioRxiv, medRxiv, openRxiv, LOCKSS,
   CLOCKSS, NISO, JATS, Jisc, Review Commons, COPIM, Opening the Future,
   Open Journals Collective, OpenAPC, openCost, Finch Report, Stockholm
   Declaration (2025), OA2020, OASPA, COPE, WCRI, Nelson Memo, UKRI, One
