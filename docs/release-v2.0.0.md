@@ -1,19 +1,28 @@
-# Release checklist: v2.0.0 as a new version of the existing Zenodo record
+# Release checklist: v2.0.0 — ABANDONED (2026-11-20)
 
-EXECUTED on 2026-11-20. Two findings from the actual release run:
+The maintainer decided on 2026-11-20 that the website edition will NOT be
+published on Zenodo (supersedes D-3's "new version of the existing record"
+practice for the site era; see the D-3 update in DECISIONS.md). The v1.0.0
+Word/PDF record 10.5281/zenodo.23449750 stays the sole Zenodo record; website
+releases are git tags of the repository.
 
-1. The Zenodo record's concept DOI is 10.5281/zenodo.23449749
-   (conceptrecid 23449749). The number 10.5281/zenodo.23449750 used
-   throughout earlier docs is the **version DOI of v1.0.0**, not the concept
-   DOI. All in-repo citations were corrected at release time.
-2. Per maintainer decision, the sandbox smoke test (step 1 of the upload
-   procedure) was skipped; the REST API calls were run directly against
-   zenodo.org. The new version DOI is 10.5281/zenodo.24396086.
+Earlier the same day, a v2.0.0 record (10.5281/zenodo.24396086, archive of the
+built site) had been published as a new version of that record via the REST
+API. Zenodo does not allow user-side deletion of published records, so its
+removal was requested from Zenodo support. The original v1.0.0 record and its
+PDF were never touched.
 
-Per docs/DECISIONS.md D-3 (one concept DOI for all versions, from the Word
-edition onward; the GitHub-Zenodo integration is deliberately NOT used) and
-D-11 (correct the "55 terms" wording at release time). Do not tag or upload
-until the first-wave drafts are reviewed and Pages is live.
+Facts learned during that run (kept for the record):
+
+1. The Zenodo concept DOI of the record is 10.5281/zenodo.23449749
+   (conceptrecid 23449749). The number 10.5281/zenodo.23449750 is the
+   version DOI of v1.0.0 itself, not the concept DOI.
+2. Per maintainer decision, the sandbox smoke test had been skipped; the API
+   calls ran directly against zenodo.org.
+
+The checklist text below is retained as the historical plan only.
+
+---
 
 ## Preconditions
 

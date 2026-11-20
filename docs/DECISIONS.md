@@ -17,6 +17,24 @@ Date: 2026-11-19 · Status: binding. The maintainer answered all eleven OPEN-QUE
 | D-11 | The canon (Q11) | The canon is the 64 full entries in the DOCX, not the Quick-Reference sheet (which was an incomplete summary). After the D-4 splits: 66 terms in v2.0.0, plus first-wave terms finished in time. Phase 0 acceptance: every DOCX heading maps to a term file or altLabel; scripted word-for-word DOCX-vs-output comparison; the cheat sheet is generated from the term files from now on; the "55 terms" wording in the Zenodo description is corrected at v2.0.0. | DATA-MODEL 7.1, ROADMAP 0.4 |
 | D-12 | Institution naming (new) | The site, repo metadata, namespace and citations name no institution as host, publisher or affiliation. The university appears only in one factual line on the About page and in the v1.0.0 history. Contributor affiliations are optional and per person, never project-wide. | ADR-0009, CONCEPT section 5 |
 
+## Updates after planning (maintainer decisions)
+
+- **D-3 update (2026-11-20):** reversed for the website era. The website
+  edition is NOT published on Zenodo. The v1.0.0 Word/PDF record (DOI
+  10.5281/zenodo.23449750) remains the sole Zenodo record; website releases
+  are git tags of the repository. A v2.0.0 Zenodo record created the same day
+  in error under this record's concept DOI (10.5281/zenodo.24396086) was
+  submitted to Zenodo support for removal; v1.0.0 and its PDF were untouched.
+  See docs/release-v2.0.0.md (abandoned) for the full account.
+- **D-3/D-11 addendum (2026-11-20):** the Zenodo concept DOI of the v1.0.0
+  record is 10.5281/zenodo.23449749; the number 10.5281/zenodo.23449750 is
+  the version DOI of v1.0.0 itself. Earlier docs mislabelled 23449750 as the
+  "concept DOI".
+- **D-6 update (2026-11-20):** per-term and site citations cite the website
+  URL (host + /term/<slug>/), not a Zenodo version DOI. The "55 terms"
+  description correction (D-11) is cancelled with the release: the v1.0.0
+  Zenodo record stays exactly as published in 2026-10.
+
 ## Deviations from the planning recommendations
 
 - **Q3/D-3:** the recommendation was a new Zenodo record (automatic, integration-friendly). The decision keeps the existing record instead: one concept DOI for the whole line, at the cost of one manual upload step per release. Zenodo's own documentation confirms the GitHub integration cannot be attached to an existing record, so the docs now describe the manual/API route and the integration is not used.

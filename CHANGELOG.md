@@ -5,14 +5,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versioning follows [SemVer](https://semver.org/): a content release that changes
 the edition counts as a major version (the Word/PDF edition was v1.0.0).
 
-## 2.0.0 (2026-11-20)
+## 2.0.0 (unreleased)
 
-First edition of the website (successor of the Word/PDF edition v1.0.0, version
-DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750); all
-versions resolve from the concept DOI
-[10.5281/zenodo.23449749](https://doi.org/10.5281/zenodo.23449749)).
-This edition is published on Zenodo as version DOI
-[10.5281/zenodo.24396086](https://doi.org/10.5281/zenodo.24396086).
+First edition of the website (successor of the Word/PDF edition v1.0.0,
+archived on Zenodo as
+[10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750)).
+Per maintainer decision of 2026-11-20, the website edition itself is not
+published on Zenodo and carries no version DOI; the live website is the
+edition, cited by its URL.
 
 ### Added
 
@@ -54,9 +54,10 @@ This edition is published on Zenodo as version DOI
 - Combined v1.0.0 entries split for precision (D-4): Replication /
   Reproducibility; Science Sleuths / Post-Publication Peer Review. The old
   combined labels remain as `alternatives`.
-- Zenodo record description will be corrected at release: v1.0.0 said
-  "55 terms" (the Quick-Reference sheet); the edition actually has 64 full
-  entries (D-11).
+- Zenodo description correction (D-11) cancelled with the Zenodo release
+  itself (maintainer decision 2026-11-20): the v1.0.0 record and its "55
+  terms" wording stay as published in 2026-10; the website edition carries
+  the corrected counts.
 
 ## 1.0.0 (2026-10-18)
 
