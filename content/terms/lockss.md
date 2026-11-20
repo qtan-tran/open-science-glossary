@@ -5,7 +5,7 @@ alternatives:
 - "Lots of Copies Keep Stuff Safe"
 themes:
 - "infrastructure"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
