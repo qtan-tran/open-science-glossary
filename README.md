@@ -53,8 +53,9 @@ as `alternatives` so existing links keep resolving.
   rejected-proposal list).
 - Phase 2 fourth wave: the five remaining deferred terms (Wikipedia, Wiki
   Goes MEK, Open Cultural Heritage, Digital Heritage, OA monograph)
-  drafted on 2026-11-20, status `draft` pending maintainer review, plus a
+  drafted and maintainer-reviewed on 2026-11-20 (status `reviewed`), plus a
   fact-check pass over the third-wave entries (see docs/BACKLOG-TERMS.md).
+  The deferred list of D-5 is now fully drafted.
 
 ## Repository map
 
