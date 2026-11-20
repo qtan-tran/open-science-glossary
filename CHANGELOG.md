@@ -19,6 +19,12 @@ Zenodo concept DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.2344
 - Machine-readable core: YAML term files with JSON Schema validation,
   closed vocabularies for themes and relationship types, stdlib-only
   migration and validation scripts, CI gates on every push and pull request.
+- Second-wave new terms, maintainer-approved 2026-11-20 (`draft` status
+  until reviewed): cOAlition S, Copyright Transfer, Rights Retention
+  Strategy, Open Infrastructure, Black Box (Latour), Community Archive,
+  Wikisource, OSF, arXiv, SocArXiv, Think. Check. Submit., Data Steward,
+  Open Notebook Science, Peer Community In (PCI), Unpaywall, OA Button
+  (16 new entries total).
 - Typed relationships between terms (PR #9): is-part-of, responds-to,
   enables, contributes-to, constrains, contrasts-with.
 - First-wave new terms (D-5), maintainer-reviewed on 2026-11-20 (status
