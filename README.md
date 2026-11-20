@@ -46,6 +46,9 @@ as `alternatives` so existing links keep resolving.
   (status `reviewed`).
 - Phase 2 second wave: sixteen additional entries maintainer-approved,
   drafted and reviewed on 2026-11-20 (see docs/BACKLOG-TERMS.md).
+- Phase 2 third wave: forty-one new entries maintainer-approved in one batch
+  on 2026-11-20, drafted as `draft` (awaiting review; see
+  docs/BACKLOG-TERMS.md for the slug list and the rejected-proposal list).
 
 ## Repository map
 

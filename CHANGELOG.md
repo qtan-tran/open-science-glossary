@@ -24,6 +24,16 @@ Zenodo concept DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.2344
   Wikisource, OSF, arXiv, SocArXiv, Think. Check. Submit., Data Steward,
   Open Notebook Science, Peer Community In (PCI), Unpaywall, OA Button
   (16 new entries total).
+- Third-wave new terms, maintainer-approved in one batch on 2026-11-20
+  (status `draft`, awaiting review): bioRxiv, medRxiv, openRxiv, LOCKSS,
+  CLOCKSS, NISO, JATS, Jisc, Review Commons, COPIM, Opening the Future,
+  Open Journals Collective, OpenAPC, openCost, Finch Report, Stockholm
+  Declaration (2025), OA2020, OASPA, COPE, WCRI, Nelson Memo, UKRI, One
+  Nation One Subscription, SPARC, ARL, ALPSP, Research4Life, FWCI, JCR,
+  Times Higher Education rankings, Information Power guidance, BioMed
+  Central, Annual Reviews, Subscribe to Open, SAGE Open, F1000Research,
+  UK Biobank, Library Consortium, Consortium Couperin, SANLiC, Hoax
+  paper (41 new entries total, bringing the corpus to 135).
 - Typed relationships between terms (PR #9): is-part-of, responds-to,
   enables, contributes-to, constrains, contrasts-with.
 - First-wave new terms (D-5), maintainer-reviewed on 2026-11-20 (status

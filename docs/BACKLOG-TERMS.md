@@ -40,6 +40,44 @@ day (status `reviewed`): `content/terms/coalition-s.md`, `copyright-transfer.md`
 `think-check-submit.md`, `data-steward.md`, `open-notebook-science.md`,
 `pci.md`, `unpaywall.md`, `oa-button.md`.
 
+## Third wave / one batch (maintainer-approved 2026-11-20, status `draft`)
+
+Forty-one new entries drafted on 2026-11-20 as `draft`, awaiting
+maintainer review:
+
+- Preprints & preservation: `biorxiv.md`, `medrxiv.md`, `openrxiv.md`,
+  `lockss.md`, `clockss.md`
+- Standards & infrastructure: `niso.md`, `jats.md`, `jisc.md`,
+  `review-commons.md`
+- Monograph & collective funding: `copim.md`, `opening-the-future.md`,
+  `open-journals-collective.md`
+- Cost transparency: `openapc.md`, `opencost.md`
+- Policy & declarations: `finch-report.md`, `stockholm-declaration.md`,
+  `oa2020.md`, `oaspa.md`, `cope.md`, `wcri.md`, `nelson-memo.md`,
+  `ukri.md`, `onos.md`
+- Advocacy & associations: `sparc.md`, `arl.md`, `alpsp.md`,
+  `research4life.md`
+- Assessment: `fwci.md`, `jcr.md`, `times-higher-education.md`,
+  `information-power.md`
+- Publishers & models: `bmc.md`, `annual-reviews.md`,
+  `subscribe-to-open.md`, `sage-open.md`, `f1000research.md`
+- Data & consortia & integrity: `uk-biobank.md`, `library-consortium.md`,
+  `couperin.md`, `sanlic.md`, `hoax-paper.md`
+
+Maintainer decisions on the 2026-11-20 proposals:
+
+- Rejected as standalone entries (covered elsewhere, too commercial, or out
+  of scope): Co-Action Publishing, Cogent OA, SAGE Community Open Access,
+  Manuscript Manager, Paradigm Publishing Services, Reviewer Credits, Web of
+  Science Preprints Index, KEGG, SINTA, United2Act, Office of the Chief
+  Science Advisor (Canada).
+- Already present (skipped): CrossRef, CLACSO, HARKing, OJS, ORCID, P-hacking,
+  ROR; Center for Open Science is covered inside the existing OSF entry.
+- Consolidated: the six consortium proposals into one umbrella entry
+  `library-consortium` plus examples `couperin` and `sanlic`; the "Conceptual
+  Penis" hoax into one `hoax-paper` concept entry; Open Research Central into
+  the `f1000research` entry.
+
 ## Deferred (removed from see-also until written)
 
 | Term | Draft slug | Where referenced in v1.0.0 |
