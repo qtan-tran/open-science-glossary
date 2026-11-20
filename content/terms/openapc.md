@@ -8,7 +8,7 @@ status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
-- text: "OpenAPC initiative, open dataset of APC payments, maintained on GitHub by TU Chemnitz and partners"
+- text: "OpenAPC initiative, open dataset of APC payments, maintained on GitHub by Bielefeld University Library with contributing institutions"
   url: "https://github.com/OpenAPC/openapc-de"
 contributors:
 - name: "Quoc-Tan Tran"
@@ -28,7 +28,7 @@ OpenAPC is an open dataset that collects and publishes article processing charge
 ## Details
 
 - **What it records:** Institution, journal, publisher, amount paid (net of discounts and VAT), currency, and whether the payment came from a transformative agreement or a standalone APC.
-- **Origin:** Started from DFG-funded reporting obligations in Germany but now aggregates APC data internationally.
+- **Origin:** Started from DFG-funded reporting obligations in Germany, with the OpenAPC infrastructure operated by Bielefeld University Library since 2014, and now aggregates APC data internationally from several hundred contributing institutions.
 - **Open science value:** Because APCs are otherwise private contract information, OpenAPC is one of the few public datasets letting researchers, libraries, and policymakers compare publisher pricing.
 
 > [!NOTE]
