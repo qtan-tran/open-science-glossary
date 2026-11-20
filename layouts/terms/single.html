@@ -65,8 +65,8 @@
   <section class="citation">
     <h2>Cite this term</h2>
     {{ $permanent := printf "%s/term/%s" site.Params.permanentBase .Params.id }}
-    <p>APA: Tran, Q.-T. (2026). <em>{{ .Title }}</em>. In <em>{{ site.Title }}</em> (Version {{ site.Params.version }}). Zenodo. {{ printf "https://doi.org/%s" site.Params.conceptDOI }}</p>
-    {{ $bibtex := printf "@misc{osg_%s,\n  author = {Tran, Quoc-Tan},\n  title = {{%s}},\n  year = {2026},\n  howpublished = {Open Science Glossary},\n  note = {Version %s. %s},\n  doi = {%s}\n}" .Params.id .Title site.Params.version $permanent site.Params.conceptDOI }}
+    <p>APA: Tran, Q.-T. (2026). <em>{{ .Title }}</em>. In <em>{{ site.Title }}</em> (Version {{ site.Params.version }}). Zenodo. {{ site.Params.versionDOIURL }}</p>
+    {{ $bibtex := printf "@misc{osg_%s,\n  author = {Tran, Quoc-Tan},\n  title = {{%s}},\n  year = {2026},\n  howpublished = {Open Science Glossary},\n  note = {Version %s. %s},\n  doi = {%s}\n}" .Params.id .Title site.Params.version $permanent site.Params.versionDOI }}
     <pre><code>{{ $bibtex }}</code></pre>
     <p class="small">Dated {{ $p.date_last_changed }} · permanent URL: <code>{{ $permanent }}</code></p>
   </section>

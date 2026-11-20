@@ -15,12 +15,14 @@ keywords:
   - open access
   - research data
 license: CC-BY-4.0
-url: https://github.com/qtan-tran/open-science-glossary
+url: https://qtan-tran.github.io/open-science-glossary/
 repository-code: https://github.com/qtan-tran/open-science-glossary
-# Version DOI is minted at each Zenodo release; this placeholder is filled in
-# as part of the release workflow (docs/ROADMAP.md, D-3). All versions of the
-# Word and site editions share the concept DOI below.
+version: "2.0.0"
+date-released: "2026-11-20"
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.23449750
+    value: 10.5281/zenodo.24396086
+    description: This release, version DOI (v2.0.0, website edition; preferred when citing this version)
+  - type: doi
+    value: 10.5281/zenodo.23449749
     description: Zenodo concept DOI (all versions, v1.0.0 onward)

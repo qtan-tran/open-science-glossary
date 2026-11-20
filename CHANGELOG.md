@@ -5,10 +5,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versioning follows [SemVer](https://semver.org/): a content release that changes
 the edition counts as a major version (the Word/PDF edition was v1.0.0).
 
-## 2.0.0 (unreleased)
+## 2.0.0 (2026-11-20)
 
-First edition of the website (successor of the Word/PDF edition v1.0.0,
-Zenodo concept DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750)).
+First edition of the website (successor of the Word/PDF edition v1.0.0, version
+DOI [10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750); all
+versions resolve from the concept DOI
+[10.5281/zenodo.23449749](https://doi.org/10.5281/zenodo.23449749)).
+This edition is published on Zenodo as version DOI
+[10.5281/zenodo.24396086](https://doi.org/10.5281/zenodo.24396086).
 
 ### Added
 
