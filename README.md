@@ -44,9 +44,8 @@ as `alternatives` so existing links keep resolving.
 - Phase 2 first wave: the eleven D-5 terms drafted (12 files, Retraction Watch
   and PubPeer split per D-4 practice), maintainer-reviewed 2026-11-20
   (status `reviewed`).
-- Phase 2 second wave: sixteen additional entries maintainer-approved and
-  drafted on 2026-11-20 (see docs/BACKLOG-TERMS.md), status `draft` until
-  review.
+- Phase 2 second wave: sixteen additional entries maintainer-approved,
+  drafted and reviewed on 2026-11-20 (see docs/BACKLOG-TERMS.md).
 
 ## Repository map
 

@@ -33,8 +33,8 @@ All eleven first-wave items were drafted on 2026-11-20 and maintainer-reviewed t
 Approved scope: the deferred terms below except Open Access Monograph, Open
 Cultural Heritage, Digital Heritage and Wikipedia, plus five new proposals
 (Data Steward, Open Notebook Science, Peer Community In, Unpaywall, OA
-Button). All sixteen were drafted on 2026-11-20 in `draft` status until the
-maintainer reviews them: `content/terms/coalition-s.md`, `copyright-transfer.md`,
+Button). All sixteen were drafted on 2026-11-20 and maintainer-reviewed the same
+day (status `reviewed`): `content/terms/coalition-s.md`, `copyright-transfer.md`,
 `rights-retention.md`, `open-infrastructure.md`, `black-box.md`,
 `community-archive.md`, `wikisource.md`, `osf.md`, `arxiv.md`, `socarxiv.md`,
 `think-check-submit.md`, `data-steward.md`, `open-notebook-science.md`,

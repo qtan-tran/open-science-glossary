@@ -34,7 +34,6 @@ The long-running structural conflict in which the subscription prices of scholar
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - The Big Deal shifted spending from à la carte subscriptions to bundled licences, concentrating budgets with the largest publishers and raising the barrier for new competitors
 - Consequences visible across this glossary: journal cancellations, ever more of the budget concentrated on ever fewer large bundles, and cost pressure that motivated transformative agreements, Plan S, and the Diamond OA resurgence
 - Monopoly economics: commercial publishers profit from unpaid peer review and editorial labour while selling the result back to institutions

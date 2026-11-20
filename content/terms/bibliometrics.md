@@ -26,7 +26,6 @@ The quantitative study of written publications and their citation patterns: coun
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - Classic objects: citation counts, the Journal Impact Factor, the h-index, and journal or country rankings
 - Related families: scientometrics (science indicators more broadly) and informetrics (the whole information literature, including altmetrics)
 - Bibliometric facts are descriptions of the citation record, not measures of scientific quality; using them as proxies is a policy choice with documented failure modes
