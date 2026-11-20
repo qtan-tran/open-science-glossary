@@ -7,7 +7,9 @@ open science terms, evolved from the Word/PDF edition v1.0.0
 The canon is the 64 full entries of the v1.0.0 Word edition. After the D-4
 splits (Replication / Reproducibility; Science Sleuths / Post-Publication Peer
 Review) that is 66 term files in v2.0.0, plus first-wave new terms
-(docs/DECISIONS.md, D-5) as they are finished. The old combined labels are kept
+(docs/DECISIONS.md, D-5): the eleven first-wave entries (with Retraction
+Watch and PubPeer split into two entries) were drafted on 2026-11-20, in
+`draft` status until reviewed. The old combined labels are kept
 as `alternatives` so existing links keep resolving.
 
 ## Status
@@ -15,7 +17,7 @@ as `alternatives` so existing links keep resolving.
 - Planning: complete (docs/, ADRs 0001-0009, decisions D-1 to D-12; PR #1).
 - Phase 0: complete (PR #2). 66 term files migrated from the v1.0.0 DOCX,
   machine-verified word-for-word; stdlib-only migration and validation tooling.
-- Phase 1: site skeleton complete (this PR). Hugo v0.170.0 (exact version
+- Phase 1: site skeleton complete (PR #3). Hugo v0.170.0 (exact version
   pinned in CI and in the checksummed download; D-2), templates in-repo, no
   external themes, no JavaScript for the reading core (ADR-0006). Term pages
   at /term/<slug>/, themes at /theme/<id>/, A-Z index, /quick-reference/
@@ -23,6 +25,8 @@ as `alternatives` so existing links keep resolving.
   (concept DOI until the first version DOI mints, D-6), BibTeX export of all
   terms, GitHub Pages deploy workflow, and the w3id .htaccess ready for the
   upstream registration (ADR-0003).
+- Phase 2 first wave: the eleven D-5 terms drafted (12 files, Retraction Watch
+  and PubPeer split per D-4 practice), status `draft` until maintainer review.
 
 ## Repository map
 
