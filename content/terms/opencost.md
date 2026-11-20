@@ -8,8 +8,10 @@ status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
-- text: "openCost DFG-funded infrastructure project, Computer Centre of the University of Regensburg and partners"
+- text: "openCost project site (German Research Foundation funded, Bielefeld University Library, DESY, Regensburg University Library)"
   url: "https://opencost.de/"
+- text: "openCost project partner page (Projektbeteiligte, German)"
+  url: "https://opencost.de/news/projektbeteiligte/"
 contributors:
 - name: "Quoc-Tan Tran"
   orcid: "0000-0003-3533-5858"
@@ -23,7 +25,7 @@ related:
   target: "transformative-agreement"
 ---
 
-openCost is a DFG-funded infrastructure project (TU Chemnitz, University of Regensburg, and partners) that develops open standards and infrastructure for recording, exchanging, and analysing all scholarly publication costs: article processing charges, transformative agreement fees, and institutional publishing expenditures.
+openCost is a DFG-funded infrastructure project run jointly by Bielefeld University Library, the German Electron Synchrotron DESY in Hamburg, and Regensburg University Library. It develops open standards and infrastructure for recording, exchanging, and analysing all scholarly publication costs: article processing charges, transformative agreement fees, and institutional publishing expenditures.
 
 ## Details
 

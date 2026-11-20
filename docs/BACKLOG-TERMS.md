@@ -79,7 +79,20 @@ Maintainer decisions on the 2026-11-20 proposals:
   Penis" hoax into one `hoax-paper` concept entry; Open Research Central into
   the `f1000research` entry.
 
-## Deferred (removed from see-also until written)
+## Fourth wave (drafted 2026-11-20, status `draft`, maintainer review pending)
+
+The five remaining deferred terms, drafted on 2026-11-20 together with a
+fact-check sweep of the third-wave entries:
+
+- `wikipedia.md`, `wiki-goes-mek.md` (crowdsourcing/GLAM context)
+- `open-cultural-heritage.md`, `digital-heritage.md` (heritage context)
+- `oa-monograph.md` (BPC/humanities context)
+
+## Deferred (removed from see-also until written; all items now written)
+
+All fifteen deferred items listed below have now been drafted (second and
+fourth waves). The table is kept as the record of where each reference came
+from in the v1.0.0 text.
 
 | Term | Draft slug | Where referenced in v1.0.0 |
 | --- | --- | --- |

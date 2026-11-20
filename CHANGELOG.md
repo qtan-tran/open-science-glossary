@@ -37,6 +37,10 @@ edition, cited by its URL.
   Central, Annual Reviews, Subscribe to Open, SAGE Open, F1000Research,
   UK Biobank, Library Consortium, Consortium Couperin, SANLiC, Hoax
   paper (41 new entries total, bringing the corpus to 135).
+- Fourth-wave new terms, drafted 2026-11-20 (status `draft`, maintainer
+  review pending): Wikipedia, Wiki Goes MEK, Open Cultural Heritage,
+  Digital Heritage, OA monograph (5 new entries, bringing the corpus to
+  140).
 - Typed relationships between terms (PR #9): is-part-of, responds-to,
   enables, contributes-to, constrains, contrasts-with.
 - First-wave new terms (D-5), maintainer-reviewed on 2026-11-20 (status
@@ -58,6 +62,18 @@ edition, cited by its URL.
   itself (maintainer decision 2026-11-20): the v1.0.0 record and its "55
   terms" wording stay as published in 2026-10; the website edition carries
   the corrected counts.
+
+### Fixed
+
+- Third-wave fact-check sweep (maintainer-requested, 2026-11-20):
+  corrected the Couperin full name (Consortium unifié des établissements
+  universitaires et de recherche pour l'accès aux publications
+  numériques, founded 1999, 250-plus member institutions), the openCost
+  project partners (Bielefeld University Library, DESY Hamburg,
+  Regensburg University Library), the OpenAPC maintenance attribution
+  (Bielefeld University Library since 2014), and expanded the Open
+  Journals Collective entry with verified launch-collection and
+  investment-campaign details.
 
 ## 1.0.0 (2026-10-18)
 

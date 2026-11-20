@@ -12,6 +12,8 @@ date_last_changed: "2026-11-20"
 sources:
 - text: "Consortium Couperin, about page (French national consortium for higher education and research)"
   url: "https://www.couperin.org/"
+- text: "Couperin (consortium), overview article (full name, founding year, membership)"
+  url: "https://en.wikipedia.org/wiki/Couperin_(consortium)"
 contributors:
 - name: "Quoc-Tan Tran"
   orcid: "0000-0003-3533-5858"
@@ -25,7 +27,7 @@ related:
   target: "open-science"
 ---
 
-Consortium Couperin ("Coordination pour l'Accès aux Publications Numériques") is the French national consortium of higher-education and research institutions. It negotiates access to scholarly information with publishers and promotes open science as a core part of its mandate.
+Consortium Couperin (Consortium unifié des établissements universitaires et de recherche pour l'accès aux publications numériques, "Unified Consortium of Higher Education and Research Organizations for Access to Digital Publications") is the French national consortium of higher-education and research institutions. Founded in 1999 and headquartered in Paris, it unites more than 250 universities, research organizations, and grandes écoles. It negotiates access to scholarly information with publishers and promotes open science as a core part of its mandate.
 
 ## Details
 
