@@ -4,7 +4,7 @@ title: "Community Archive"
 themes:
 - "heritage"
 - "equity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -29,7 +29,6 @@ An archive created, owned and governed by the community it documents, rather tha
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Motivated in part by exclusion: mainstream memory institutions historically collected little about marginalised groups and described them in hostile categories
 - Digital tools lower the cost of self-archiving but raise new governance questions: hosting on commercial platforms can quietly relocate control out of the community, and digitisation grant conditions often demand open licences that conflict with community norms
 - Borders the Indigenous data sovereignty claims: for Indigenous collections, authority to control extends to data governance, not only custody of physical items

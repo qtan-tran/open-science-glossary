@@ -4,7 +4,7 @@ title: "Unpaywall"
 themes:
 - "infrastructure"
 - "publishing"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,6 @@ A free service, launched in 2017 by the nonprofit OurResearch and run since late
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - For each article it classifies the best open location found (gold publisher copy, green repository copy, hybrid) and exposes the licence when known
 - Because the underlying data is public, it has become the de facto measurement instrument for open access shares of the literature, used in funders' monitoring (in adaptation) and in research on the OA landscape
 - The same team also built OpenAlex, the open scholarly graph, and the two systems now share one database

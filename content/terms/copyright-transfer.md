@@ -6,7 +6,7 @@ alternatives:
 - "Copyright assignment"
 themes:
 - "licensing"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,6 @@ The clause in a traditional publication contract under which the author signs th
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Typical carve-out: the right to self-archive the accepted manuscript (the basis of the green OA layer) and to reuse parts in future work
 - Alternatives that keep more rights with the author: author addenda, licence-to-publish contracts, and outright refusal in favour of open licences
 - Copyright transfer is the legal backbone of the subscription model: it gives the publisher the exclusive rights that subscription and hybrid sales monetise

@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "peer-review"
 - "publishing"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -30,7 +30,6 @@ A nonprofit organisation, founded in 2020 by French research-community leaders, 
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Splits the two jobs of a journal: certification (PCI does it, in public) and hosting of the version of record (any repository or journal can do it, including its own diamond open access offshoot, Peer Community Journal, launched in 2021)
 - Adoption is growing steadily: in 2025 the communities handled 521 submissions and issued 248 recommendations, and Peer Community Journal has published hundreds of articles
 - Each community (PCI Zoology, PCI Ecology, PCI Paleontology, PCI Mathematical and Computational Sciences and others) sets its own standards within a shared review platform

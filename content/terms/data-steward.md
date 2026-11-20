@@ -3,7 +3,7 @@ id: "data-steward"
 title: "Data Steward"
 themes:
 - "data"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -26,7 +26,6 @@ A professional role, increasingly institutionalised in universities and research
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - The role grew with data management mandates: national funders and the European Commission require data management plans and long-term availability, and researchers needed trained people between the policy and the lab bench
 - Disciplines and institutions differ sharply in where stewards sit (library, faculty, IT), and communities of practice have emerged to align curricula
 - Stewardship of data about Indigenous peoples is bounded by Indigenous data sovereignty: in those settings the steward shares authority over access decisions with the community concerned
