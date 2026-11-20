@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "data"
 - "equity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,7 @@ The right and capacity of Indigenous peoples to govern the collection, ownership
 
 ## Details
 
-- First-wave new entry (D-5): draft awaiting maintainer review
+- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - Operationalised through national and regional networks (e.g., Te Mana Raraunga in Aotearoa New Zealand, the US Indigenous Data Sovereignty Network, and the Global Indigenous Data Alliance, GIDA) and through the CARE principles: Collective benefit, Authority to control, Responsibility, Ethics
 - Motivated in part by open-data mandates: "open by default" can clash with Indigenous governance when data were collected without consent or strip communities of control
 - In practice: data governance agreements, tiered access, community-controlled repositories, and metadata provenance fields identifying the source community

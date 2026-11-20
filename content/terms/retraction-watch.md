@@ -4,7 +4,7 @@ title: "Retraction Watch"
 themes:
 - "integrity"
 - "peer-review"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,7 @@ A blog founded in 2010 by journalists Adam Marcus and Ivan Oransky that tracks a
 
 ## Details
 
-- First-wave new entry (D-5): draft awaiting maintainer review
+- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - The Retraction Watch Database, the largest public index of retractions, was acquired by Crossref and is openly available through the Crossref API; the blog continues its investigative reporting
 - Its investigations have exposed paper mills, editor manipulation, and citation gaming, feeding both journalism (partnerships with Science and other outlets) and research-integrity research
 - Together with PubPeer it forms the public accountability layer of the scholarly record, complementing slow editorial and institutional processes

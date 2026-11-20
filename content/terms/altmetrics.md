@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "assessment"
 - "participation"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -31,7 +31,7 @@ Metrics of scholarly impact built on the social web: mentions, saves, discussion
 
 ## Details
 
-- First-wave new entry (D-5): draft awaiting maintainer review
+- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - The manifesto's two claims: track new scholarship on the web, and speed (days instead of years for a first impact signal)
 - Commercial and public aggregators collect the raw events; unlike the Journal Impact Factor, altmetrics are computed at the level of single articles and other products
 - Value depends on the audience: high Twitter attention often tracks press coverage rather than scientific use
