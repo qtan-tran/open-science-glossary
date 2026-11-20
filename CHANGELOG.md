@@ -37,8 +37,8 @@ edition, cited by its URL.
   Central, Annual Reviews, Subscribe to Open, SAGE Open, F1000Research,
   UK Biobank, Library Consortium, Consortium Couperin, SANLiC, Hoax
   paper (41 new entries total, bringing the corpus to 135).
-- Fourth-wave new terms, drafted 2026-11-20 (status `draft`, maintainer
-  review pending): Wikipedia, Wiki Goes MEK, Open Cultural Heritage,
+- Fourth-wave new terms, maintainer-reviewed on 2026-11-20 (status
+  `reviewed`): Wikipedia, Wiki Goes MEK, Open Cultural Heritage,
   Digital Heritage, OA monograph (5 new entries, bringing the corpus to
   140).
 - Typed relationships between terms (PR #9): is-part-of, responds-to,
