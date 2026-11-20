@@ -4,6 +4,8 @@ Decided in D-5 (2026-11-19). The build fails on any "see also" pointing at a ter
 
 ## First wave (v2.0.0 if finished in time, else v2.1.0)
 
+All eleven first-wave items were drafted on 2026-11-20 (status "draft" until maintainer review; Retraction Watch and PubPeer were split into two entries, following the D-4 practice of not combining distinct actors). See `content/terms/open-science.md`, `open-data.md`, `oer.md`, `doaj.md`, `publication-bias.md`, `indigenous-data-sovereignty.md`, `serials-crisis.md`, `bibliometrics.md`, `altmetrics.md`, `pkp.md`, `retraction-watch.md`, `pubpeer.md`.
+
 | Term | Draft slug | Demand source | Theme draft |
 | --- | --- | --- | --- |
 | Open Science | open-science | umbrella reference throughout the text | publishing, policy |
