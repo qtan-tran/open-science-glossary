@@ -28,6 +28,18 @@ All eleven first-wave items were drafted on 2026-11-20 and maintainer-reviewed t
 | Participatory Research | Co-production (of knowledge) |
 | Research Data Management (RDM) | DMP (Data Management Plan) |
 
+## Second wave (maintainer-approved 2026-11-20)
+
+Approved scope: the deferred terms below except Open Access Monograph, Open
+Cultural Heritage, Digital Heritage and Wikipedia, plus five new proposals
+(Data Steward, Open Notebook Science, Peer Community In, Unpaywall, OA
+Button). All sixteen were drafted on 2026-11-20 in `draft` status until the
+maintainer reviews them: `content/terms/coalition-s.md`, `copyright-transfer.md`,
+`rights-retention.md`, `open-infrastructure.md`, `black-box.md`,
+`community-archive.md`, `wikisource.md`, `osf.md`, `arxiv.md`, `socarxiv.md`,
+`think-check-submit.md`, `data-steward.md`, `open-notebook-science.md`,
+`pci.md`, `unpaywall.md`, `oa-button.md`.
+
 ## Deferred (removed from see-also until written)
 
 | Term | Draft slug | Where referenced in v1.0.0 |
