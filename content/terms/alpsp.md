@@ -5,7 +5,7 @@ alternatives:
 - "Association of Learned and Professional Society Publishers"
 themes:
 - "publishing"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:

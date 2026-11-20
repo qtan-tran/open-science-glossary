@@ -7,7 +7,7 @@ alternatives:
 themes:
 - "peer-review"
 - "integrity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-10-18"
 date_last_changed: "2026-10-18"
 sources:
