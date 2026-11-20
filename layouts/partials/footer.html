@@ -1,13 +1,13 @@
-{{ $pre := site.Params.preRelease }}
 <p>
-  <strong>{{ site.Title }}</strong> · Version {{ site.Params.version }}{{ if $pre }} (pre-release, not yet cited on Zenodo){{ end }} ·
+  <strong>{{ site.Title }}</strong> · Version {{ site.Params.version }} ·
   Content: <a href="https://creativecommons.org/licenses/by/4.0/">{{ site.Params.licenseContent }}</a> ·
   Code: <a href="{{ "LICENSE-CODE" | relURL }}">{{ site.Params.licenseCode }}</a>
 </p>
 <p id="site-citation">
-  Cite the glossary: Tran, Q.-T. (2026). <em>{{ site.Title }}</em> (Version {{ site.Params.version }}). Zenodo.
-  <a href="{{ site.Params.versionDOIURL }}">https://doi.org/{{ site.Params.versionDOI }}</a>
-  (all versions resolve from the concept DOI <a href="{{ site.Params.conceptDOIURL }}">10.5281/zenodo.23449749</a>)
+  Cite the website: Tran, Q.-T. (2026). <em>{{ site.Title }}</em> (Version {{ site.Params.version }}).
+  <a href="{{ site.Params.hostURL }}">{{ site.Params.hostURL }}</a>.
+  The v1.0.0 Word/PDF edition is archived on Zenodo:
+  <a href="{{ site.Params.conceptDOIURL }}">https://doi.org/{{ site.Params.conceptDOI }}</a>.
 </p>
 <p>
   Term URLs are permanent via <a href="https://w3id.org/">w3id.org</a>: <code>{{ site.Params.permanentBase }}/term/apc</code>.

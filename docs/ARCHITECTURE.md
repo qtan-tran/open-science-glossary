@@ -12,7 +12,7 @@ Status: approved 2026-11-19 (maintainer review; decisions in [DECISIONS.md](DECI
                         |                            (deployable unchanged anywhere)
                         |── exports (Python, pinned) ──> CSV / JSON / SKOS (ttl, jsonld) ──> release assets + site/downloads/
                         `── printable sheet (PDF-ish export of Quick-Reference) ──> release artifact + classroom use
-  releases: tag ──> GitHub Release ──> Zenodo record 10.5281/zenodo.23449750 as a NEW VERSION (manual upload or REST API, D-3; not the GitHub integration) ──> Software Heritage archive
+  releases: tag ──> GitHub Release ──> Software Heritage archive   (Zenodo upload cancelled 2026-11-20, D-3 update; the v1.0.0 Word/PDF record 10.5281/zenodo.23449750 stays the sole Zenodo record)
   URLs: https://w3id.org/os-glossary/...  ──302──> current host (GitHub Pages today)
 ```
 
@@ -71,13 +71,30 @@ Total: **one site generator + three small Python libraries**. That is the entire
 
 ## 4. Build, deploy, and release pipeline
 
+**Update 2026-11-20 (maintainer decision, D-3 update):** the website edition is
+NOT published to Zenodo. Website releases are git tags + GitHub Releases (+
+Software Heritage). The v1.0.0 Word/PDF record (10.5281/zenodo.23449750)
+remains the sole Zenodo record and is never versioned from this repository.
+The Zenodo steps in the pipeline described below are retained as the
+historical design only; see docs/release-v2.0.0.md (abandoned) and the D-3
+update in docs/DECISIONS.md.
+
 | Workflow | Trigger | Steps | Success gate |
 | --- | --- | --- | --- |
 | validate.yml | every push/PR to any branch | parse term files; schema-validate front matter; check every relation/see-also target and theme id exists; check candidates.yaml holds otherwise-dangling refs; basic link-lint (no dead internal URLs) | red/green on PR; required check |
 | deploy.yml | push to main | run Hugo build + exports + SVG; upload artefact; deploy Pages; push mirror to Codeberg | site live at version of main |
 | release.yml | tag v* | build; generate CHANGELOG.md from term dates + git history; create GitHub Release with assets (built-site.zip, glossary.csv, glossary.json, os-glossary.ttl, os-glossary.jsonld, quick-reference PDF export); Codeberg mirror tag | GitHub Release page complete |
 
-Manual per release (the only manual steps in the whole system): run the release checklist (docs/rebuild.md, Phase 6): fill date-released + doi in CITATION.cff, publish the GitHub Release (via UI or gh release CLI), upload the release assets as a new version of Zenodo record 10.5281/zenodo.23449750 (web UI or REST API; smoke-test on sandbox.zenodo.org first, per Zenodo guidance; the GitHub integration would mint a separate record and is not used, D-3/ADR-0004), update the record description wording (e.g. term counts, D-11), then submit the tag to Software Heritage save-code-now. Rationale for the automation boundary: one concept DOI from the Word edition onward is worth one manual upload step per release.
+**Update 2026-11-20 (supersedes the Zenodo chain below, D-3 update):** manual
+per release is now only: publish the GitHub Release (via UI or gh release
+CLI) for the tag, and submit the tag to Software Heritage save-code-now. The
+Zenodo upload step is cancelled. Historical design, kept for the record:
+fill date-released + doi in CITATION.cff, upload the release assets as a new
+version of Zenodo record 10.5281/zenodo.23449750 (web UI or REST API;
+smoke-test on sandbox.zenodo.org first, per Zenodo guidance; the GitHub
+integration would mint a separate record and is not used, D-3/ADR-0004),
+update the record description wording (e.g. term counts, D-11), then submit
+the tag to Software Heritage save-code-now.
 
 ## 5. URL design and identifiers
 
@@ -112,7 +129,7 @@ Citation payload every term page carries (auto-generated from release metadata):
   title  = {{APC (Article Processing Charge)}},
   howpublished = {In \emph{Open Science Glossary} (v2.0.0)},
   year   = {2027},
-  doi    = {10.5281/zenodo.XXXXXXX},       <- version DOI, minted automatically after release
+  url    = {https://qtan-tran.github.io/open-science-glossary/term/apc}   <- site URL citation (D-6 update 2026-11-20; no Zenodo version DOI)
   url    = {https://w3id.org/os-glossary/term/apc}
 }
 ```
@@ -123,10 +140,10 @@ plus an APA string, plus "how to cite the whole glossary" (concept DOI) on every
 
 1. **Term slugs** never reused; deprecations keep pages and redirect data (ADR-0003).
 2. **w3id URLs** are the citable canonical everywhere: page footers, exports, schema.org, SKOS IRIs, PDF export footer. Host URLs never appear in printed material.
-3. **Zenodo chain** (ADR-0004, D-3): one concept DOI (10.5281/zenodo.23449750) = "the glossary" from the Word edition onward; version DOIs per release; v2.0.0+ publishes as new versions of that same record. Release assets include the built artefacts so the *rendered* site version is archival too.
+3. **Archival chain** (updated 2026-11-20, D-3 update): the website edition is archived via GitHub Releases and Software Heritage, not Zenodo. The v1.0.0 Word/PDF record stays the sole Zenodo record. Historic note: the pre-2026-11-20 design was one Zenodo concept DOI for the whole line with version DOIs per release.
 4. **Software Heritage** archives git history per release (ADR-0008), giving SWHIDs for any future "source of this exact page in 2029" question.
 5. **CHANGELOG.md** (generated) documents per-release term-level changes; terms carry date_created / date_last_changed (see DATA-MODEL).
-6. **Old versions viewable**: every Zenodo version DOI freezes the release ZIP (including the built HTML in assets), satisfying "old versions stay viewable" even without hosting old branches.
+6. **Old versions viewable** (updated 2026-11-20): every GitHub Release freezes the release ZIP (including the built HTML in assets), satisfying "old versions stay viewable" even without hosting old branches.
 
 ## 7. Accessibility implementation notes (WCAG 2.2 AA)
 

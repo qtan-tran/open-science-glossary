@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: >-
-  If you cite the glossary, cite the release you used via its version DOI
-  (all versions resolve from the concept DOI below).
+  If you cite the glossary website, cite it by its URL and version below;
+  the archived Word/PDF edition v1.0.0 is cited by its Zenodo DOI.
 title: Open Science Glossary
 type: document
 author:
@@ -18,11 +18,7 @@ license: CC-BY-4.0
 url: https://qtan-tran.github.io/open-science-glossary/
 repository-code: https://github.com/qtan-tran/open-science-glossary
 version: "2.0.0"
-date-released: "2026-11-20"
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.24396086
-    description: This release, version DOI (v2.0.0, website edition; preferred when citing this version)
-  - type: doi
-    value: 10.5281/zenodo.23449749
-    description: Zenodo concept DOI (all versions, v1.0.0 onward)
+    value: 10.5281/zenodo.23449750
+    description: Zenodo record of the archived Word/PDF edition v1.0.0 (not the website edition; the website is not published on Zenodo)

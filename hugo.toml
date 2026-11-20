@@ -17,12 +17,10 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]  # no taxonomy pages: them
     noClasses = false
 
 [params]
-  conceptDOI = "10.5281/zenodo.23449749"
-  conceptDOIURL = "https://doi.org/10.5281/zenodo.23449749"
-  versionDOI = "10.5281/zenodo.24396086"
-  versionDOIURL = "https://doi.org/10.5281/zenodo.24396086"
+  conceptDOI = "10.5281/zenodo.23449750"
+  conceptDOIURL = "https://doi.org/10.5281/zenodo.23449750"
   version = "2.0.0"
-  preRelease = false  # v2.0.0 published on Zenodo and tagged (ROADMAP 1.6)
+  preRelease = false  # website edition is not published on Zenodo (maintainer decision 2026-11-20, D-3 update); v1.0.0 Word/PDF stays the sole Zenodo record
   permanentBase = "https://w3id.org/os-glossary"  # ADR-0003; registered via upstream PR (roadmap 1.5)
   hostURL = "https://qtan-tran.github.io/open-science-glossary/"
   licenseContent = "CC BY 4.0"

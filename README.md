@@ -2,7 +2,8 @@
 
 A bilingual (English first, German pilot planned), machine-readable glossary of
 open science terms, evolved from the Word/PDF edition v1.0.0
-([Zenodo concept DOI 10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750), CC BY 4.0).
+(archived Word/PDF edition on Zenodo:
+[DOI 10.5281/zenodo.23449750](https://doi.org/10.5281/zenodo.23449750), CC BY 4.0).
 
 ## Read the glossary
 
@@ -38,9 +39,9 @@ as `alternatives` so existing links keep resolving.
   external themes, no JavaScript for the reading core (ADR-0006). Term pages
   at /term/<slug>/, themes at /theme/<id>/, A-Z index, /quick-reference/
   generated from the term files (D-11), per-term APA + BibTeX citations
-  (concept DOI until the first version DOI mints, D-6), BibTeX export of all
-  terms, GitHub Pages deploy workflow, and the w3id .htaccess ready for the
-  upstream registration (ADR-0003).
+  (site URL; no Zenodo DOIs for the website edition, D-6 update 2026-11-20),
+  BibTeX export of all terms, GitHub Pages deploy workflow, and the w3id
+  .htaccess ready for the upstream registration (ADR-0003).
 - Phase 2 first wave: the eleven D-5 terms drafted (12 files, Retraction Watch
   and PubPeer split per D-4 practice), maintainer-reviewed 2026-11-20
   (status `reviewed`).
@@ -107,8 +108,9 @@ that has no term file fails the build (D-5).
 - Permanent term URLs will live under `https://w3id.org/os-glossary/...`
   (namespace confirmed unclaimed at registration time; no institution names, D-12).
 - Semantic versioning; the site era starts at v2.0.0 because the format and data
-  model change (D-3). New versions are published as new versions of the existing
-  Zenodo record, so the whole Word-to-site history keeps one concept DOI.
+  model change (D-3). Per maintainer decision of 2026-11-20 the website edition
+  is not published on Zenodo; website versions are git tags of the repository,
+  and the v1.0.0 Word/PDF record remains the sole Zenodo record.
 - Content: CC BY 4.0 (`LICENSE-CONTENT`). Code: MIT (`LICENSE-CODE`). See
   ADR-0007.
 
