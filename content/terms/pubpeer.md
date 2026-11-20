@@ -31,7 +31,6 @@ An online platform, launched in 2012, where anyone can post public comments on p
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - The pseudonymity model balances whistleblowers' protection against the risk of drive-by attacks; PubPeer requires verifiable evidence in comments and forwards serious issues to journals and authors
 - Real effects documented: mass comment threads preceding institutional investigations, retractions and corrections of papers first flagged on the site
 - Legal harassment of anonymous commenters has shaped its history: PubPeer successfully defended commenters' anonymity in a 2016 court case

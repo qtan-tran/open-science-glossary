@@ -30,7 +30,6 @@ Teaching, learning and research materials in any medium or format that reside in
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - The characteristic "5R" activities enabled by open licences: retain, reuse, revise, remix and redistribute
 - Common licence choices: CC BY and CC BY-SA; the "openness" question turns on whether derivatives and commercial reuse are allowed
 - Distinct from "free to view" course content: without licence rights to adapt and redistribute, material is not OER

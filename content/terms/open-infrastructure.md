@@ -5,7 +5,7 @@ alternatives:
 - "Open scholarly infrastructure"
 themes:
 - "infrastructure"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -32,7 +32,6 @@ The shared services, software and standards that scholarly communication runs on
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Typical examples in this glossary: Open Journal Systems as publishing infrastructure, Zenodo as repository infrastructure, Crossref and DataCite as registry infrastructure, DOAJ and Unpaywall as discovery infrastructure
 - The decisive property is governance, not only licensing: who controls the roadmap, the data and the exit options when a service shuts down
 - Sustainability is the standing weak point: most open infrastructure depends on a small number of institutions, funders and grants

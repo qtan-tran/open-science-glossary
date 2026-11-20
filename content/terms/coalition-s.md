@@ -3,7 +3,7 @@ id: "coalition-s"
 title: "cOAlition S"
 themes:
 - "policy"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -29,7 +29,6 @@ An international consortium of public research funders and foundations, launched
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Instruments developed or coordinated by the coalition: the Plan S principles and their implementation guidance, the Rights Retention Strategy, criteria for transformative agreements and publishers, and Diamond OA support lines
 - Its member organisations make open access a condition of grant funding, shifting the default from author volunteering to funder mandate
 - The word "S" in Plan S stands for science, shock, speed and shift ("accelerating the transition to full and immediate open access")

@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "licensing"
 - "policy"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -34,7 +34,6 @@ A policy approach, developed by cOAlition S from 2021, under which funders requi
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - The strategy works through grant conditions rather than contract negotiation: accepting the funding contractually binds the author to the retention requirement
 - The licensed manuscript is the accepted (post-peer review) version, not the published version of record; the typeset file usually stays behind the paywall
 - Legal tests of the approach, including cases where publishers demanded waivers, are documented in the coalition's successive annual reviews

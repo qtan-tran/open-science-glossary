@@ -7,7 +7,7 @@ alternatives:
 themes:
 - "infrastructure"
 - "integrity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -31,7 +31,6 @@ A web platform, run by the nonprofit Center for Open Science (Charlottesville, U
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Registrations can be made public immediately or embargoed for up to a fixed period, which lets teams share their plans early without tipping a competitive hypothesis
 - Since 2025 the Center for Open Science is developing the OSF into a broader Open Science Ecosystem with support from the US National Science Foundation, adding large-scale collaboration features across institutional boundaries
 - A registration is not peer review: it certifies what was planned and when, not whether the plan was any good

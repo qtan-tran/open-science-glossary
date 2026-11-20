@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "infrastructure"
 - "equity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -31,7 +31,6 @@ An open repository for preprints in sociology and adjacent social sciences, laun
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Founded out of dissatisfaction with multi-year review lags in sociology journals and with the concentration of publication decisions in a small number of elite journals
 - Open to working papers, and its stated equity rationale: scholars at less privileged institutions, and those outside tenure-track jobs, can circulate work immediately instead of waiting for gatekeepers
 - Frequently paired in this glossary with CLACSO and bibliodiversity: both are attempts to widen who can publish and be read in the social sciences

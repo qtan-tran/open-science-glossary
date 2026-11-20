@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "infrastructure"
 - "publishing"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -30,7 +30,6 @@ The largest open repository of research preprints, founded by physicist Paul Gin
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Submissions are moderated by volunteers for relevance and basic scholarly form, but not peer reviewed in the journal sense; the certificate of correctness remains with the later journal version
 - It demonstrated the preprint model's effects: near-zero distribution cost, citation advantage in fast-moving fields, and a decoupling of certification from dissemination that later spread to biology (bioRxiv) and the social sciences (SocArXiv and others)
 - Funded by member institutions rather than charges to authors; a governance upgrade in 2024 created the arXiv Advisory Council alongside university and funder membership

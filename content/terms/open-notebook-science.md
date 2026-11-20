@@ -6,7 +6,7 @@ alternatives:
 themes:
 - "integrity"
 - "participation"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -31,7 +31,6 @@ The practice of publishing the research notebook itself, in near real time: expe
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Goes a step beyond open data and open access: those release products, open notebook science releases process, including the negatives and dead ends that vanish from published accounts
 - Claimed benefits: richer documentation than any paper can carry, third parties catching errors early, and a genuine answer to selective reporting because the record exists before the outcome is known
 - In practice it survives mostly in niches (parts of chemistry, citizen science projects, some computational work) because the costs are asymmetric: daily posting effort for diffuse, uncertain benefit

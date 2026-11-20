@@ -31,7 +31,6 @@ A community-curated directory of open access journals that applies quality crite
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - Inclusion is free, application-based, and periodically re-evaluated; a major 2015-2017 re-application round removed several thousand journals that did not meet the updated criteria
 - Most listed journals charge no article processing charges, making DOAJ the main index of the Diamond OA layer of publishing
 - Its v1.0.0 glossary appearances were in the Quick-Reference table only; this entry supplies the fuller context (D-11)

@@ -34,7 +34,6 @@ An umbrella concept for movements and practices that aim to make scientific know
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20; this entry is the anchor that the other "open X" entries link back to
 - Core strands commonly distinguished: open access (publications), open data and open methods, open peer review, open educational resources, and participation of societal actors such as citizen scientists
 - UNESCO's definition couples openness with the goals of increasing research quality, collaboration, and the sharing of knowledge beyond the walls of academia
 - Debated criticisms concern the risk of a "publish or perish" open-science industry, the dominance of English-language infrastructure, and unequal capacity to be open across world regions

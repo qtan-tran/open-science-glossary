@@ -7,7 +7,7 @@ alternatives:
 themes:
 - "publishing"
 - "integrity"
-status: "draft"
+status: "reviewed"
 date_created: "2026-11-20"
 date_last_changed: "2026-11-20"
 sources:
@@ -30,7 +30,6 @@ A campaign, produced by a coalition of scholarly communication organisations, th
 
 ## Details
 
-- Second-wave new entry (approved 2026-11-20): draft awaiting maintainer review
 - Founded in the mid-2010s in response to the growth of deceptive publishing, and maintained by a cross-sector committee of libraries, publishers, funders and integrity organisations
 - Works as harm reduction for the author side of the predatory journal problem: it targets the moment of decision, before a paper, a fee or a copyright is surrendered
 - Pairs naturally with the whitelist approach of DOAJ: the checklist sharpens judgement, the directory certifies venues that passed review

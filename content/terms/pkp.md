@@ -33,7 +33,6 @@ A research and infrastructure project, founded by John Willinsky in 1998, that d
 
 ## Details
 
-- First-wave new entry (D-5), maintainer-reviewed on 2026-11-20
 - Main software: Open Journal Systems (OJS), Open Monograph Press (OMP), Open Preprint Systems (OPS)
 - As open-source PHP software it is also a commons: community plugins, translations and hosting services grow around it
 - Institutional significance: PKP undermines the claim that publishing infrastructure must be rented from commercial providers
