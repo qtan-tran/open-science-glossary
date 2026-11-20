@@ -14,7 +14,7 @@ All eleven first-wave items were drafted on 2026-11-20 and maintainer-reviewed t
 | DOAJ | doaj | v1.0.0 Quick-Reference table only | publishing, infrastructure |
 | Publication Bias | publication-bias | integrity/reproducibility context | integrity |
 | Indigenous Data Sovereignty | indigenous-data-sovereignty | CARE principles context | data, equity |
-| Serials Crisis / Big Deal | serials-crisis | APC/Elsevier/transformable-agreement context | publishing |
+| Serials Crisis / Big Deal | serials-crisis | APC/Elsevier/transformative-agreement context | publishing |
 | Bibliometrics | bibliometrics | assessment/metrics context | assessment |
 | Altmetrics | altmetrics | assessment context | assessment |
 | Public Knowledge Project (PKP) | pkp | OJS/OMP context | infrastructure, publishing |
