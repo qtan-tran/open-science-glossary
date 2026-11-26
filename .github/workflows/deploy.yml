@@ -53,7 +53,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
 # Codeberg mirror (ADR-0008): add a job that pushes the built repo to
 # codeberg.org/os-glossary once a CODEBERG_TOKEN secret is set (Phase 4).
